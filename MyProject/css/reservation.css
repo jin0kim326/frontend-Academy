@@ -1,0 +1,165 @@
+header {
+  padding: 10px;
+  border: 1px solid #eee;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.header-logo img {
+  width: 350px;
+}
+.header-my {
+  position: absolute;
+  top: 25px;
+  right: 35px;
+}
+.my-function {
+  display: flex;
+  justify-content: space-between;
+}
+.my-function li {
+  margin: 10px 10px 0px 0px;
+  font-size: 13px;
+}
+.search {
+  margin-top: 50px;
+  display: flex;
+  justify-content: end;
+}
+.search input {
+  border: 1px solid transparent;
+  border-bottom: 1px solid black;
+  width: 150px;
+}
+.search input:focus {
+  outline: none;
+}
+.reservation-wrap {
+  position: absolute;
+  left: calc(50% - 500px);
+  top: calc(50% - 250px);
+}
+.reservation-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.reservation-title h2 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.reservation-title p {
+  font-size: 15px;
+}
+.main-wrap {
+  width: 1000px;
+  height: 400px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+}
+th {
+  background-color: rgba(200, 200, 200, 0.1);
+}
+th,
+tr,
+td {
+  height: 35px;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  font-size: 13px;
+}
+
+td:first-child {
+  width: 7%;
+}
+td:nth-child(2) {
+  width: 50%;
+  text-align: left;
+  padding-left: 10px;
+  cursor: pointer;
+}
+td:nth-child(3) {
+  width: 20%;
+}
+td:nth-child(4) {
+  width: 16%;
+}
+td:last-child {
+  width: 7%;
+}
+.page {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 2px 5px 2px;
+  margin-top: 20px;
+}
+.page_num {
+  padding: 7px 10px;
+  background-color: rgba(180, 180, 180, 0.4);
+  border-radius: 2px;
+  border: 1px solid transparent;
+  margin: 0 -1px;
+}
+.page_num:hover {
+  background-color: whitesmoke;
+  border: 1px solid rgb(78, 78, 78);
+}
+.fa-pen {
+  padding-right: 5px;
+}
+.write-button {
+  padding: 7px 12px;
+  margin-right: 2px;
+  background-color: rgb(0, 0, 0);
+  border: 1px solid transparent;
+  border-radius: 2px;
+  color: white;
+}
+.write-button:hover {
+  border: 1px solid black;
+  background-color: whitesmoke;
+  color: black;
+}
+.reservation-search {
+  text-align: center;
+  margin-top: 50px;
+}
+.search-select {
+  width: 130px;
+  text-align: center;
+  outline: 0;
+}
+.search-text {
+  padding: 10px;
+  width: 200px;
+  color: #bbb;
+  outline: 0;
+  padding: 5px;
+}
+.search-text,
+.search-select {
+  border: 1px solid #ccc;
+  height: 25px;
+  border-radius: 2px;
+  font-family: inherit;
+}
+.search-button {
+  background-color: rgb(190, 190, 190, 0.4);
+  color: black;
+  padding: 5px 10px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  outline: 0;
+}
+.search-button:hover {
+  background-color: whitesmoke;
+  border: 1px solid rgb(78, 78, 78);
+}
+.fa-magnifying-glass {
+  padding-right: 5px;
+}

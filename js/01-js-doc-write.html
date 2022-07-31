@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>document.write</title>
+  </head>
+  <body>
+    <h2>Welcome Hello World</h2>
+    <script>
+      /*      
+      let username = prompt("이름을 입력하세요.");
+      // prompt = input 이라고 생각. 입력받는값
+      //   document.write("안녕하세요. " + username + "님 환영합니다.");
+      document.write(
+        `안녕하세요. <strong><i>${username}</i></strong>님 환영합니다.`
+      );
+      // html태그도 넣어줄수있음 , 백틱써서 하는게 편리함
+*/
+
+      //-----------------------------------------------
+
+      //apend 와 비슷
+
+      //   let list = "";
+      //   list += "<ul>";
+      //   list += "<li>메뉴<li>";
+      //   list += "<li>메뉴1<li>";
+      //   list += "<li>메뉴2<li>";
+      //   list += "<li>메뉴3<li>";
+      //   list += "</ul>";
+      // 왜 제대로 안되징 .!
+
+      //+= : append (이어서 작업(덮어쓰기말고 이어붙일게요))
+      //sum += i; 와 같음
+
+      // document.write(list);
+
+      //-----------------------------------------------
+      /*      
+      let numbers = prompt("숫자를 입력하세요.");
+        switch(변수명)
+            case 조건:
+                break;
+            ...
+            default:
+                break;
+*/
+      /*      
+      let numbers = Number(prompt("숫자를 입력하세요."));
+      // 타입을 Number로, 안써주면 string으로 타입이뜸.
+      // 홀수, 짝수 %2
+      //   1    0
+
+      // 5부제 %5
+      alert(typeof numbers); // 테스트 끝나면 주석처리
+      //typeof 입력값 타입확인
+      //입력한 값 확인하는 용도
+
+      switch (numbers % 2) {
+        case 0:
+          document.write("짝수입니다.");
+          break;
+        case 1:
+          document.write("홀수입니다.");
+          break;
+        default:
+          document.write("유효하지 않은 값입니다.");
+          break;
+      }
+*/
+
+      //-----------------------------------------------
+      /*
+      let numbers = Number(prompt("숫자를 입력하세요."));
+      //0보다 이상 양수, 미만 음수
+      //let result = 조건 ? "참" : "거짓"  이중,삼중 으로도 쓸수있음
+      let result = numbers >= 0 ? "양수" : "음수";
+      document.write(result);
+*/
+    </script>
+  </body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Board</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+        /* reset */
+        * {
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        body{
+            font-family: "Open Sans", sans-serif;
+        }
+        table {
+          border-collapse: collapse;
+          width: 100%;
+          /* 테이블 초기화 / 표는 인라인 */
+          border-top: 3px solid black;
+        }    
+        th{
+            background-color: #eee;
+        }
+        th,
+        tr,
+        td{
+            height: 35px;
+            border-bottom: 1px solid #ccc;
+            text-align: center;
+            font-size: 13px;
+        }
+        select,
+        button,
+        input {
+          border: 0;
+          outline: 0;
+          background-color: transparent;
+          cursor: pointer;
+        }
+        /* reset end */
+
+
+        .main-wrap{
+            margin: 20px auto;
+            width: 98%;
+            /* 가운데 정렬 margin-left : 5% margin-right : 5% 도 가능하지만
+            padding 을 써도 됨. */
+        }
+        .top{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            align-items: center;
+        }
+        .top-left{
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .path1{
+            color:rgb(235, 66, 66);
+        }
+        .search-select {
+        width: 100px;
+        }
+        .search-text{
+            width: 200px;
+            color: #bbb;
+        }
+        .search-text,.search-select {
+            border: 1px solid #ccc;
+            height: 25px;
+            border-radius: 2px;
+        }
+        .search-button{
+            background-color: rgb(190, 190, 190);
+            color: black;
+            padding: 5px 10px;
+            border: 1px solid transparent;
+            border-radius: 3px;
+        }
+        .search-button:hover{
+            background-color: white;
+            border: 1px solid  rgb(78, 78, 78);
+        }
+        .fa-magnifying-glass{
+            padding-right: 5px;
+        }
+        td:first-child {
+            width: 7%;
+        }
+        td:nth-child(2) {
+            width: 50%;
+            text-align: left;
+            padding-left: 10px;
+        }
+        td:nth-child(3) {
+            width: 20%;
+        }
+        td:nth-child(4) {
+            width: 16%;
+        }
+
+        td:last-child {
+            width: 7%;
+        }
+        .page{
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 2px 5px 2px;
+            background-color: #eee;
+        }
+        .page_num{
+            padding : 7px 10px;
+            background-color: rgb(180, 180, 180);
+            border-radius: 2px;
+            border: 1px solid transparent;
+            margin: 0 -1px;
+        }
+        .page_num:hover{
+            background-color: white;
+            border: 1px solid  rgb(78, 78, 78);
+        }
+        .fa-pen{
+            padding-right: 5px;
+        }
+        .write-button{
+            padding : 7px 12px;
+            margin-right: 2px;
+            background-color: rgb(0, 0, 0);
+            border: 1px solid transparent;
+            border-radius: 2px;
+            color: white;
+        }
+        .write-button:hover{
+            border: 1px solid black;
+            background-color: white;
+            color: black;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="main-wrap">
+        <div class="top">
+            <div class="top-left">
+                <span class="path1">Home > Group ></span>
+                <span class="path2">Notice</span>
+                 
+            </div>
+            <div class="top-right">
+                <!-- form  꼭 해야함!!!!! input, select 같은애들 -->
+                <form method="post" action="result.do"
+                name="frm" id="frm" class="frm">
+                <select class="search-select" >
+                    <option>--검색 조건--</option>
+                    <option value="subject">제목</option>
+                    <option value="content">내용</option>
+                    <option value="writer">글쓴이</option>
+                    <!-- value 아주 중요. -->
+                  </select>
+                <input class="search-text" type="text" value="Search">
+                <button class="search-button">
+                    <i class="fa-solid fa-magnifying-glass"></i>search</button>
+                    </form>
+            </div>
+        </div>
+        <div class="table-wrap">
+            <table class="table">
+                <thead></thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Subject</th>
+                    <th>Name</th>
+                    <th>Registration</th>
+                    <th>Count</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>게시판 테스트 입니다.</td>
+                    <td>관리자</td>
+                    <td>2022.07.10</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>공지사항</td>
+                    <td>관리자</td>
+                    <td>2022.07.10</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>필독</td>
+                    <td>관리자</td>
+                    <td>2022.07.11</td>
+                    <td>1004</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>게시판 4번째 글입니다.</td>
+                    <td>관리자</td>
+                    <td>2022.07.11</td>
+                    <td>4</td>
+                </tr>
+
+            </tbody>
+            </table>
+        </div>
+        <div class="page">
+                <div class="page-wrap">
+                    <button class="page_num">&lt;</button>
+                    <!-- 좌/우 화살표 아이콘으로도 가능 -->
+                    <button class="page_num">1</button>
+                    <button class="page_num">2</button>
+                    <button class="page_num">3</button>
+                    <button class="page_num">4</button>
+                    <button class="page_num">5</button>
+                    <button class="page_num">&gt;</button>
+                    <!-- span으로 작성하고 
+                    width, height, color, text-align(+line-height)와 함께
+                    border 등으로 css 넣어줘도 됨. -->
+                    <!-- div 여러개 주고..
+                    .page div:first-child 처럼 주면 됨..
+                    border를 사방으로 주면 가운데가 겹쳐지면서 두줄이되니까
+                    사이사이에 선 하나씩 빼주면 됨. 
+                    가운데로 글자 두는것도 flex 써서 just~ 도 center 
+                    item~ 도 센터로 두면 됨..-->
+                </div>
+            <button class="write-button"><i class="fa-solid fa-pen"></i></i>write</button>
+        </div>
+    </div>
+  </body>
+</html>

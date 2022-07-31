@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Open Sans", sans-serif;
+      }
+      .container {
+        padding: 20px;
+      }
+
+      /* sel, search, button 에 넓이,높이를 따로 주는것이 아니고
+      감싸는 박스를 만들어서 거기서 조절하기.
+      자식에는 넓이높이 x  */
+      .sel {
+        width: 100%;
+        border: 1px solid #db2828;
+        color: #db2828;
+        font-size: 14px;
+        border-radius: 3px;
+        outline: 0;
+        font-family: inherit;
+        padding: 5px;
+        margin: 8px 0;
+        font-weight: bold;
+      }
+      .search {
+        width: 100%;
+        border: 1px solid #b1b1b1;
+        color: gray;
+        font-size: 14px;
+        border-radius: 3px;
+        outline: 0;
+        font-family: inherit;
+        padding: 5px;
+        margin-bottom: 7px;
+      }
+      .button {
+        background-color: #db2828;
+        color: white;
+        cursor: pointer;
+        font-size: 14px;
+        border-radius: 3px;
+        padding: 6px 12px;
+        border: 0;
+        font-family: inherit;
+        outline: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h4>검색 타입을 선택하세요</h4>
+      <form id="frm" action="search.do">
+        <!-- search.do 같은건 스프링으로,, 아니면 js부분에 다르게써줌-->
+        <!-- select > option > value -->
+        <select id="sel" class="sel">
+          <option value="">선택하세요</option>
+          <!--선택지 아닌 기본값은 value값 비워둠-->
+          <option value="1">제목+내용</option>
+          <!-- value는 작업할 때 쓰이니까 꼭쓰기 -->
+          <option value="2">제목</option>
+          <option value="3">내용</option>
+          <option value="4">작성자</option>
+        </select>
+        <input type="text" id="search" class="search" autofocus />
+        <button class="button">검색</button>
+      </form>
+    </div>
+
+    <script>
+      //동작()
+      //이벤트
+      function selectValidate() {
+        //alert("ok");
+        if (document.getElementById("sel").value === "") {
+          alert("검색타입을 선택하세요");
+          return false;
+        }
+
+        //trim 좌우 공백 제거
+        if (document.getElementById("search").value.trim() === "") {
+          alert("검색어를 입력하세요");
+          document.getElementById("search").focus();
+          return false; // 끝내지X
+        }
+        return true;
+      }
+      document.getElementById("frm").addEventListener("submit", (e) => {
+        e.preventDefault(); // 페이지 전환 X
+        selectValidate();
+      });
+    </script>
+  </body>
+</html>

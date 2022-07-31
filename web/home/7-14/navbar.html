@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .onOff {
+      display: none;
+    }
+  </style>
+  <body>
+    <div class="navbar-wrap" id="navbar-wrap">
+      <button type="toggle" id="tgBtn" class="tgBtn">버튼</button>
+      <ul class="ul">
+        <li><a href="">Menu1</a></li>
+        <li><a href="">Menu2</a></li>
+        <li><a href="">Menu3</a></li>
+        <li><a href="">Menu4</a></li>
+        <li><a href="">Menu5</a></li>
+      </ul>
+    </div>
+    <script>
+      function ulOnOff() {
+        // alert("ok~");
+        document.querySelector("ul").classList.toggle("onOff");
+      }
+      document.getElementById("tgBtn").addEventListener("click", ulOnOff);
+    </script>
+  </body>
+</html>

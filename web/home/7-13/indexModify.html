@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Menu Responsive</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kristi&family=Lato&family=Lora:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      /* reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .kristi-font {
+        font-family: "Kristi", cursive;
+      }
+      .lato-font {
+        font-family: "Lato", sans-serif;
+      }
+      .lora-font {
+        font-family: "Lora", serif;
+      }
+      ul li {
+        list-style: none;
+      }
+      a {
+        color: #222;
+        text-decoration: none;
+      }
+      /* reset end */
+      .hero-bg {
+        background-image: url(../images/pc.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: #eee;
+        width: 100vw;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .top-wrap {
+        position: absolute;
+        top: 0;
+        left: 5%;
+        right: 5%;
+        width: 90%;
+        height: 100px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        /* 높이값 없으면 세로정렬 안됨 !  */
+      }
+      .top-wrap h1 {
+        color: red;
+      }
+      .nav-menu ul {
+        display: flex;
+        flex-direction: row;
+      }
+      .nav-menu li a {
+        margin-left: 25px;
+        font-weight: bold;
+        color: white;
+      }
+      .nav-menu ul li a:hover {
+        color: tomato;
+        transition: 0.2s;
+      }
+      .showBtn {
+        position: absolute;
+        top: 4.7%;
+        right: 5%;
+      }
+      .showBtn {
+        font-size: 30px;
+        cursor: pointer;
+      }
+      .hero-content h2 {
+        font-size: 100px;
+      }
+      .hero-content h2,
+      .hero-content p {
+        text-align: center;
+        color: white;
+      }
+
+      .showBtn i {
+        display: none;
+      }
+
+      @media (max-width: 1000px) {
+        .hero-bg {
+          background-image: url(../images/tab.jpg);
+        }
+        .top-wrap {
+          height: 50px;
+
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .top-wrap h1 {
+          margin-top: 30px;
+          margin-bottom: 15px;
+        }
+        .hero-content h2 {
+          font-size: 80px;
+        }
+      }
+      @media (max-width: 500px) {
+        .hero-bg {
+          background-image: url(../images/mobile.jpg);
+        }
+        .top-wrap {
+          position: absolute;
+          top: 0;
+          left: 0;
+
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          /* 높이값 없으면 세로정렬 안됨 !  */
+        }
+        .nav-menu {
+          display: none;
+          background-color: white;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100vw;
+        }
+        .top-wrap h1 {
+          margin-top: 17%;
+          margin-left: 5%;
+        }
+        .nav-menu ul {
+          display: flex;
+          flex-direction: column;
+        }
+        .nav-menu ul li {
+          padding: 20px 0;
+        }
+        .nav-menu li a {
+          margin-left: 25px;
+          font-weight: bold;
+          color: black;
+        }
+        .nav-menu ul li a:hover {
+          color: tomato;
+          transition: 0.2s;
+        }
+        .hero-content h2 {
+          font-size: 60px;
+        }
+        .hero-content h2,
+        .hero-content p {
+          text-align: center;
+        }
+        .showBtn i {
+          display: block;
+          color: red;
+        }
+        .open {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero-bg">
+      <div class="top-wrap">
+        <h1>TASTY</h1>
+        <div class="nav-menu" id="nav-menu">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">RESTO</a></li>
+            <li><a href="#">MENU</a></li>
+            <li><a href="#">SPECIAL</a></li>
+            <li><a href="#">RESERVATION</a></li>
+            <li><a href="#">GALLERY</a></li>
+            <li><a href="login.html">ADMIN</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="showBtn" id="showBtn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <div class="hero-content">
+        <h2 class="hero-title kristi-font">delicious italian food</h2>
+        <p style="letter-spacing: 2px" class="hero-pra lora-font">
+          MAKING DELICIOUS ITALIKAN FOOD SINCE 1990
+        </p>
+      </div>
+    </div>
+  </body>
+  <script>
+    //변수 - 동작 - 이벤트 순서로 만듬
+    //변수 없이 만듬,?? 동작 먼저
+    const showMenu = () => {
+      // console.log("clicked...");
+      document.getElementById("nav-menu").classList.toggle("open");
+    };
+    document.querySelector("#showBtn i").addEventListener("click", showMenu);
+  </script>
+</html>

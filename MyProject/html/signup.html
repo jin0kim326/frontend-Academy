@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YES INTERIOR SHOP Signup</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/signup.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="header-logo">
+          <span>
+            <a href="index.html"><img src="../img/yes-interior-logo-removebg-preview.png" alt=""/>
+            </a></span>
+        </h1>
+        <div class="header-my">
+          <ul class="my-function">
+            <li><a class="login-page" href="login.html">LOGIN</a></li>
+            <li><a class="signup-page" href="signup.html">JOIN</a></li>
+            <li><a href="#">CART</a></li>
+            <li><a href="#">ORDER</a></li>
+            <li><a href="#">MYPAGE</a></li>
+          </ul>
+          <div class="search">
+            <i class="fa-solid fa-magnifying-glass"><input type="text" /></i>
+          </div>
+        </div>
+      </header>
+<!-- main header  -->
+
+    <div class="signup-wrap">
+      <div class="signup-box">
+        <h1>Signup</h1>
+        <form
+          method="post"
+          action="../admin/index.html"
+          name="frm"
+          id="frm"
+          class="frm"
+          enctype="multipart/form-data"
+        >
+        
+          <div class="input-wrap">
+            <label>Userid</label>
+            <input
+              type="text"
+              name="userid"
+              class="userid"
+              id="userid"
+              placeholder="userid"              
+            />
+            <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+              <small> This is Error Message </small>
+          </div>
+          <div class="input-wrap">
+            <label>Password</label>
+            <input
+              type="password"
+              name="passwd"
+              class="passwd"
+              id="passwd"
+              placeholder="passwd"
+              />
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+              <small> This is Error Message </small>
+          </div>
+          <div class="input-wrap">
+            <label>Confirm password</label>
+            <input
+              type="password"
+              name="confirm-passwd"
+              class="confirm-passwd"
+              id="confirm-passwd"
+              placeholder="confirm passwd"
+            />
+            <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+              <small> This is Error Message </small>
+          </div>
+          <div class="input-wrap">
+            <label>Email</label>
+            <input
+              type="text"
+              name="email"
+              class="email"
+              id="email"
+              placeholder="email"
+            />
+            <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+              <small> This is Error Message </small>
+          </div>
+          <div class="input-wrap">
+            <label>Phone Number</label>
+            <input
+              type="tel"
+              name="tel"
+              class="tel"
+              id="tel"
+              placeholder="phone number"
+              />
+              <i class="fas fa-check-circle"></i>
+              <i class="fas fa-exclamation-circle"></i>
+             <small> This is Error Message </small>
+          </div>
+
+          <div class="loginlink">
+            <a href="login.html">If you have an account, then login now!</a>
+          </div>
+          <div>
+            <button type="submit" class="btn">Signup</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="../My-js/signup.js">
+      // const inputId = document.querySelector(".userid");
+      // const inputPasswd = document.querySelector(".passwd");
+      // const inputconfirmPasswd = document.querySelector(".confirm-passwd");
+      // const inputEmail = document.querySelector(".email");
+      // const inputtel = document.querySelector(".tel");
+      // const DomText = document.querySelector(".text");
+      // const SignupBtn = document.querySelector(".btn");
+
+      // 회원가입 함수
+      // const signup = () => {
+      //   location.href = "login.html";
+      // };
+      // let userid = document.frm.userid;
+      // let passwd = document.frm.passwd;
+
+      //     if( userid.value === null || userid.value === '' ){
+      //           alert('아이디를 입력하세요.');
+      //          userid.focus();
+      //           return false;
+      //       }
+      //       if( passwd.value === null || passwd.value === '' ){
+      //           alert('비밀번호를 입력하세요.');
+      //           passwd.focus();
+      //           return false;
+      //       }
+      //       if( passwd.value.length < 8 && passwd.value.length > 20){
+      //           alert('비밀번호는 8자리~20자리 이내로 입력해주세요.');
+      //           passwd.value = "";
+      //           passwd.focus();
+      //           return false; 
+      //       }else if(num < 0 || eng < 0 || spe < 0 ){
+      //         alert("영문,숫자, 특수문자를 혼합하여 입력해주세요.");
+      //           return false;
+      //       }
+      //     }
+      // const printAlert = (text) => {
+      //   DomText.innerHTML = `<b>${text}를 입력하세요.</b>`;
+      // };
+
+      // const handleLogin = (event) => {
+      //   event.preventDefault();
+      // }
+       
+
+        // 아이디는 8~12자리 입력,
+        // 비밀번호는 10~18자리 입력 - 특수문자포함
+        // 보완해놓기
+
+    </script>
+  </body>
+</html>

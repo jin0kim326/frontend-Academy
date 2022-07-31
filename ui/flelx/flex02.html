@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Layout02</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <style>
+      .container {
+        background-color: lightgoldenrodyellow;
+        /* width: 100%; */
+        max-width: 960px;
+        /* 최대 960px 길이 - 줄였을땐 꽉차있고 960이상 늘렸을때먹힘
+        스크롤 안생김. */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /* 크기 맞춰서 줄바꿈해줌 */
+      }
+      .item {
+        width: 100px;
+        height: 100px;
+        background-color: steelblue;
+        color: white;
+        margin: 10px;
+        padding: 20px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* text-align 으로도 할 수 있지만(여기선 flex때문에 안됨..)
+         flex로도 할 수 있음 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">box 1</div>
+      <div class="item">box 2</div>
+      <div class="item">box 3</div>
+      <div class="item">box 4</div>
+      <div class="item">box 5</div>
+      <div class="item">box 6</div>
+      <div class="item">box 7</div>
+      <div class="item">box 8</div>
+      <div class="item">box 9</div>
+    </div>
+  </body>
+</html>

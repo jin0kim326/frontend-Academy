@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Click Counter</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        let count = 0;
+        const h1 = document.querySelector("h1");
+
+        h1.addEventListener("click", () => {
+          count++;
+          h1.textContent = `Click count : ${count}`;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Click Count : 0</h1>
+  </body>
+</html>

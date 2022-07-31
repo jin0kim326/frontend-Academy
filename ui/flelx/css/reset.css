@@ -1,0 +1,9 @@
+@charset 'utf-8';
+/* ; 빼먹지 말기 */
+
+* {
+  /* 유니버셜도 연습이니까 쓰고 웬만하면 안씀 */
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}

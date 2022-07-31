@@ -1,0 +1,43 @@
+/* CSS Reset  */
+body,
+button,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+li,
+ol,
+p,
+select,
+ul {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Lora", serif; */
+  font-family: "Merriweather", serif;
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+button,
+input {
+  border: 0;
+  border-radius: 0;
+}
+button {
+  cursor: pointer;
+}
+img {
+  border: 0;
+}
+ol,
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}

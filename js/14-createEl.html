@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CreateElement - 없는 요소를 생성(이벤트 사용시)</title>
+  </head>
+  <body>
+    <h2>CreateTextNode(html 요소 내에 글자를 만들어 낼 때)</h2>
+    <!-- <li>메뉴1</li> ->  메뉴1 과 같은 글자를 만들어 내는 것-->
+    <form>
+      <input type="text" autofocus id="subject" />
+      <button onClick="addList(); return false;">목록 추가</button>
+    </form>
+    <hr />
+    <ul id="itemList"></ul>
+    <script>
+      function addList() {
+        //console.log("ok");
+        //요소 노드(부모/자식 .. 계단처럼.. js폴더안에 js/css/html있고..이런거) 추가.
+        let addItem = document.createElement("li");
+        // let.addText = document.createTextNode(
+        //   document.getElementById("subject").value
+        // );
+        let val = document.getElementById("subject").value;
+        let addText = document.createTextNode(val);
+        //console.log(addText);
+        // <li>addText</li>
+        addItem.appendChild(addText); // appendChild = 자식으로 붙이게함
+        // <ul><li>addText</li></ul>
+        document.getElementById("itemList").appendChild(addItem);
+
+        document.getElementById("subject").value = "";
+      }
+    </script>
+  </body>
+</html>

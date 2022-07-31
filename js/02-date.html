@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>data</title>
+  </head>
+  <body>
+    <div id="show"></div>
+    <script>
+      /*
+      let today = new Date();
+      let hour = today.getHours(); //.은 안에 라는 의미
+
+      if (hour < 12) {
+        alert("오전입니다");
+      } else {
+        alert("오후입니다");
+      }
+      */
+      // 함수 만들기
+      // 동작
+      //
+      // 이벤트/함수실행
+
+      //실제로 js로 시간띄우기는 그냥 테스트용 / 안쓰임
+      function clock() {
+        setInterval(() => {
+          let today = new Date();
+
+          let hours = today.getHours();
+          let minutes = today.getMinutes();
+          let seconds = today.getSeconds(); //이까지 동작부분
+
+          document.getElementById(
+            "show"
+          ).innerHTML = `${hours}시${minutes}분${seconds}초`;
+          //html에 집어넣어달라
+        }, 1000);
+        // 1초마다 실행시켜주세요
+      }
+
+      clock();
+
+      //setInterval(실행함수, 시간);
+      //setInterval(() => {
+      //}, interval);
+    </script>
+  </body>
+</html>

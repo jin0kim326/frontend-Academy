@@ -1,0 +1,92 @@
+body {
+  background-color: lightgoldenrodyellow;
+}
+.Signupbox-wrap {
+  background-color: white;
+  width: 700px;
+  height: 900px;
+  position: absolute;
+  left: calc(50% - 350px);
+  top: calc(50% - 450px);
+  padding: 30px;
+  border-radius: 8px;
+}
+.Signup-title h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input-wrap {
+  margin-top: 10px;
+  padding: 20px 60px;
+}
+
+.input-wrap .input {
+  width: 100%;
+  /* width 줄이고 margin 0 auto는 x? */
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid rgb(175, 175, 175);
+}
+.input-wrap .input:focus {
+  border: 1px solid black;
+}
+.input-wrap .input {
+  padding-left: 40px;
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position: 10px 10px;
+}
+.userid {
+  background-image: url(../img/user-solid.svg);
+}
+.passwd {
+  background-image: url(../img/lock-solid.svg);
+}
+.confirm-passwd {
+  background-image: url(../img/check-solid.jpg);
+}
+.email {
+  background-image: url(../img/envelope-solid.jpg);
+}
+.tel {
+  background-image: url(../img/mobile-screen-button-solid.jpg);
+}
+.input-wrap p {
+  font-size: 14px;
+  padding: 5px;
+  color: red;
+}
+.rdoGrp {
+  display: flex;
+  align-items: center;
+  height: 30px;
+}
+.rdoGrp input[type="radio"] {
+  width: 15px;
+  height: 15px;
+}
+.button-wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+.signup-page-link {
+  font-size: 14px;
+  line-height: 40px;
+  align-content: center;
+}
+.button-wrap button {
+  padding: 8px 25px;
+  font-size: 15px;
+  background-color: darkseagreen;
+  color: white;
+  border-radius: 3px;
+  border: 1px solid darkseagreen;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+.button-wrap button:hover {
+  background-color: rgb(50, 120, 80);
+  border: 1px solid rgb(50, 120, 80);
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .div-align-center {
+        /* 박스 하나 * 4 + 박스 사이 간격(margin(총3개)) = 전체크기
+            400px   * 4 +      10px       * 3          = 1630px*/
+        width: 1630px;
+        margin: 20px auto;
+      }
+      .box-wrap {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+      .box {
+        width: 400px;
+        margin-bottom: 10px;
+      }
+      .box-img img {
+        width: 100%;
+      }
+      .item-price {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      .old-price {
+        color: red;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .new-price {
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .right-icon {
+        background-color: tomato;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        /* 높이값을 알때 line-height(줄간격)을 사용해서
+        세로 가운데 정렬을 해줄 수 있음.
+        높이 값(height)과 같게 주면 됨 */
+        border-radius: 3px;
+      }
+      .right-icon i {
+        color: white;
+        font-size: 18px;
+      }
+      .right-icon:hover {
+        background-color: white;
+        transition: 0.2s;
+      }
+      .right-icon:hover i {
+        color: tomato;
+      }
+
+      @media (max-width: 400px) {
+        .div-align-center {
+          /* 박스 하나 * 4 + 박스 사이 간격(margin(총3개)) = 전체크기
+            400px   * 4 +      10px       * 3          = 1630px*/
+          width: 1630px;
+          margin: 20px auto;
+        }
+        .box-wrap {
+          display: flex;
+          /************************************************/
+          /* flex-direction: row --> column;*/
+          /* flex-wrap: wrap --> nowrap; */
+          /************************************************/
+          flex-direction: column;
+          flex-wrap: nowrap;
+          justify-content: space-between;
+        }
+        .box {
+          background-color: rgb(221, 255, 143);
+          width: 400px;
+          height: 400px;
+          margin-bottom: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 화면 넓이 지정 & div(사각형)을 가운데로 이동 -->
+    <div class="div-align-center">
+      <!-- flex 설정을 위한 (가로배치)div -->
+      <!--  display:flex 
+            flex-direction:row
+            flex-wrap:wrap -->
+      <div class="box-wrap">
+        <div class="box">
+          <div class="box-img">
+            <img src="./images/fashion4.jpg" alt="" />
+          </div>
+          <div class="box-detail">
+            <div class="item-title">상품이름</div>
+            <div class="item-price">
+              <div class="left-price">
+                <span class="old-price"><del>$99.00</del></span>
+                <span class="new-price">$80.00</span>
+              </div>
+              <div class="right-icon">
+                <i class="fa-solid fa-cart-arrow-down"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="box">이미지</div>
+        <div class="box">이미지</div>
+        <div class="box">이미지</div>
+      </div>
+    </div>
+  </body>
+</html>

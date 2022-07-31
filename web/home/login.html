@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Box</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kristi&family=Lato&family=Lora:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      ul li {
+        list-style: none;
+      }
+      a {
+        color: #222;
+        text-decoration: none;
+      }
+      /* reset end */
+      body {
+        background-color: #e7e7e7;
+      }
+      .login-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+      }
+      .login-box {
+        background-color: white;
+        box-shadow: 0 0 10px 3px lightsteelblue;
+        padding: 40px 50px;
+        border: 1px solid rgba(34, 36, 38, 0.2);
+        border-radius: 7px;
+        width: 300px;
+        height: 350px;
+      }
+      .login-box h1 {
+        margin-bottom: 30px;
+        text-align: center;
+      }
+      .userid,
+      passwd {
+        margin-bottom: 5px;
+      }
+      input {
+        border: 0;
+        outline: 0;
+        border: 1px solid #e7e7e7;
+        border-radius: 3px;
+        width: 100%;
+        padding: 8px 4px;
+        margin-bottom: 10px;
+      }
+      .text{
+        color: red;
+        font-size: 10px;
+        height: 15px;
+        
+      }
+      .signLink {
+        font-size: 13px;
+        margin-top: 15px;
+      }
+      .btn {
+        border: 0;
+        background-color: lightsteelblue;
+        color: white;
+        padding: 6px 12px;
+        font-size: 15px;
+        border-radius: 3px;
+        float: right;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+      .text {
+        height: 20px;
+        font-size: 11px;
+      }
+      ::placeholder {
+        color: steelblue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-wrap">
+      <div class="login-box">
+        <h1>Login</h1>
+        <form
+          method="post"\
+          action="../admin/index.html"
+          enctype="multipart/form-data"
+        >
+          <div class="userid-wrap">
+            <label>Userid</label>
+            <input
+              type="text"
+              name="userid"
+              class="userid"
+              id="userid"
+              placeholder="userid"
+              required
+            />
+          </div>
+          <div class="passwd-wrap">
+            <label>Password</label>
+            <input
+              type="password"
+              name="passwd"
+              class="passwd"
+              id="passwd"
+              placeholder="passwd"
+              required
+            />
+          </div>
+          <p class="text" id="text"></p>
+          <div class="signLink">
+            <a href="sign.html">Don't you have an account?</a>
+          </div>
+          <div>
+            <button type="submit" class="btn">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      const inputId = document.querySelector(".userid");
+      const inputPasswd = document.querySelector(".passwd");
+      const DomText = document.querySelector(".text");
+      const loginBtn = document.querySelector(".btn");
+
+      // 로그인 함수
+      const login = () => {
+        alert("login");
+        location.href = "https://www.naver.com";
+      };
+
+      // Input(사용자입력칸)에 입력되었는지 체크하는 함수
+      const checkInput = (inputId, inputPasswd) => {
+
+
+        if (inputId.value == "") {
+          printAlert("아이디");
+          inputId.focus();
+          return false;
+        }
+
+        if (inputPasswd.value == "") {
+          printAlert("비밀번호");
+          inputPasswd.focus();
+          return false;
+        }
+
+        return true;
+      };
+      const printAlert = (text) => {
+        DomText.innerHTML = `<b>${text}를 입력하세요.</b>`;
+      };
+
+      const noticeNoMember = () => {
+        DomText.innerHTML = `<b>존재하지 않는 회원입니다.</b>`;
+      };
+
+      const handleLogin = (event) => {
+        event.preventDefault();
+
+
+        if (!checkInput(inputId, inputPasswd)) return;
+
+
+        if (userid.value == "id123" && passwd.value == "passwd123") {
+          login();
+        } else {
+          noticeNoMember();
+        }
+      }
+
+        document.querySelector(".btn").addEventListener("click", handleLogin);
+
+
+      /*
+      
+      const userid = document.querySelector(".userid");
+      const passwd = document.querySelector(".passwd");
+      const DomText = document.querySelector(".text");
+
+      const login = (event) => {
+        event.preventDefault();
+
+        console.log(userid.value, passwd.value);
+        
+        if (userid.value == "id123" && passwd.value == "passwd123") {
+          alert("login");
+          location.href = "https://www.naver.com";
+
+        } else if (userid.value == "") {
+          DomText.innerHTML = "<b>아이디를 입력하세요.</b>";
+          userid.focus();
+        } else if (passwd.value == "") {
+          DomText.innerHTML = "<b>패스워드를 입력하세요.</b>";
+          passwd.focus();
+        } else {
+          DomText.innerHTML = "<b>아이디 또는 패스워드를 확인하세요.</b>";
+          userid.value = "";
+          passwd.value = "";
+          userid.focus();
+        }
+      };
+      document.querySelector(".btn").addEventListener("click", login);
+      */
+    </script>
+  </body>
+</html>

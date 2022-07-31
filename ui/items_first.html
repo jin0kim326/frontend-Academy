@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home > items</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      .title {
+        margin: 30px auto;
+      }
+      .title h1 {
+        text-align: center;
+        font-size: 30px;
+        text-transform: capitalize;
+      }
+      .products_list {
+        margin: 20px auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 50%;
+        flex-wrap:wrap;
+      }
+      .product {
+        width: 31%;
+      }
+      .product:hover {
+        border: 1px solid rgb(139, 139, 139);
+
+      }
+      .product_image {
+        overflow: hidden;
+      }
+      .product_image img {
+        width: 100%;
+      }
+      .product_image img:hover {
+        transform: scale(1.1);
+        transition: 0.1s;
+        cursor: pointer;
+      }
+      .product_name {
+        padding: 2px;
+        display: flex;
+        flex-direction: column;
+      }
+      .product_name h3 {
+        font-size: 15px;
+      }
+      .product_name p {
+        font-size: 13px;
+        text-align: center;
+      }
+      .product_name h3:hover {
+        cursor: pointer;
+      }
+      .product_price {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 10px;
+        margin: 10px 0px;
+      }
+      .icon-box {
+        background-color:transparent;
+        padding:3px;
+        border:2px solid rgb(0, 0, 0);
+      }
+      .icon-box:hover{
+        transform: scale(1.1);
+        transition: 0.1s;
+        cursor: pointer;
+      }
+
+      .icon-box i {
+        color:black;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="title"><h1>shop products</h1></div>
+      <div class="products_list">
+        <!-- item1 -->
+        <div class="product">
+          <div class="product_image">
+            <img src="./images/t-shirt1-1.jpg" alt="" />
+          </div>
+          <div class="product_name">
+            <h3>TAY SON T-Shirt</h3>
+            <div class="product_price">
+              <p>$35</p>
+                <div class="icon-box">
+                  <i class="fa-solid fa-cart-arrow-down"></i>
+                </div>
+            </div>
+          </div>
+        </div>
+        <!-- item2 -->
+        <div class="product">
+          <div class="product_image">
+            <img src="./images/t-shirt3-1.jpg" alt="" />
+          </div>
+          <div class="product_name">
+            <h3>Lettering T-Shirt White</h3>
+            <div class="product_price">
+              <p>$31</p>
+              <div class="icon-box">
+                <i class="fa-solid fa-cart-arrow-down"></i>
+              </div>
+              
+            
+            </div>
+          </div>
+        </div>
+        <!-- item3 -->
+        <div class="product">
+          <div class="product_image">
+            <img src="./images/t-shirt2-1.jpg" alt="" />
+          </div>
+          <div class="product_name">
+            <h3>Lettering T-Shirt Black</h3>
+            <div class="product_price">
+              <p>$31</p>
+              <div class="icon-box">
+                <i class="fa-solid fa-cart-arrow-down"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- item4 -->
+      
+        <div class="product">
+          <div class="product_image">
+            <img src="./images/inthecloset1.jpg" alt="" />
+          </div>
+          <div class="product_name">
+            <h3>Corset T-Shirt</h3>
+            <div class="product_price">
+              <p>$34</p>
+              <div class="icon-box">
+                <i class="fa-solid fa-cart-arrow-down"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- item5 -->
+        <div class="product">
+          <div class="product_image">
+            <img src="./images/inthecloset2.jpg" alt="" />
+          </div>
+          <div class="product_name">
+            <h3>Basic T-Shirt White</h3>
+            <div class="product_price">
+              <p>$25</p>
+              <div class="icon-box">
+                <i class="fa-solid fa-cart-arrow-down"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- item6 -->
+        <div class="product">
+          <div class="product_image">
+            <img src="./images/inthecloset3.jpg" alt="" />
+          </div>
+          <div class="product_name">
+            <h3>Paper Tube-Top T-Shirt</h3>
+            <div class="product_price">
+              <p>$29</p>
+              <div class="icon-box">
+                <i class="fa-solid fa-cart-arrow-down"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+    </section>
+  </body>
+</html>

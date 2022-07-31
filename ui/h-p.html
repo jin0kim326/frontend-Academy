@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>h1~h6, p ex</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      /* PC style*/
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+      .box-wrap {
+        background-color: rgb(221, 226, 226);
+        padding: 70px 0px;
+      }
+      .box {
+        text-align: center;
+        width: 1280px;
+        max-width: 100%;
+        /* 화면 줄였을때 스크롤 생기지 않고 꽉차게 */
+        margin: 0 auto;
+      }
+      .box > .subtitle {
+        font-size: 24px;
+      }
+      .box > h3 {
+        font-size: 40px;
+        margin: 15px 0px;
+      }
+      .box > .content {
+        /* color: #aaa; */
+        color: rgba(0, 0, 0, 0.5);
+        margin-bottom: 40px;
+      }
+      .icon-box-wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .icon-box {
+        width: 32%;
+      }
+      i {
+        font-size: 60px;
+      }
+      .icon-box-wrap h4 {
+        font-size: 22px;
+        margin: 10px 0;
+      }
+      .icon-box-wrap p {
+        color: rgba(0, 0, 0, 0.5);
+      }
+      /* PC style end */
+
+      /* Mobile style */
+
+      @media (max-width: 400px) {
+        .box-wrap {
+          background-color: rgb(221, 226, 226);
+          padding: 70px 20px;
+        }
+        .box {
+          text-align: center;
+          width: 1280px;
+          max-width: 100%;
+          /* 화면 줄였을때 스크롤 생기지 않고 꽉차게 */
+          margin: 0 auto;
+        }
+        .box > .subtitle {
+          font-size: 16px;
+        }
+        .box > h3 {
+          font-size: 25px;
+          margin: 15px 0px;
+        }
+        .box > .content {
+          /* color: #aaa; */
+          color: rgba(100, 0, 0, 0.7);
+        }
+      }
+
+      /* Mobile style end*/
+    </style>
+  </head>
+  <body>
+    <!-- 블록타입(화면가득) -->
+    <!-- <div></div> -->
+    <!-- 인라인타입(글자만큼채우기) -->
+    <!-- <span></span> -->
+
+    <!-- h1~h6 중요도 순서 -->
+    <!-- logo에 h1 쓰라고..? -->
+    <!-- p : paragraph (많은내용) -->
+    <div class="box-wrap">
+      <div class="box">
+        <p class="subtitle">What We Do</p>
+        <h3>We have the knowledge and experience.</h3>
+        <p class="content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+          corporis earum nostrum nulla, nam delectus veritatis expedita saepe,
+          tempora cupiditate ex alias! Beatae voluptate molestias ullam
+          obcaecati consequatur ipsam neque?
+        </p>
+        <!-- 3 icon box -->
+        <div class="icon-box-wrap">
+          <div class="icon-box">
+            <div class="icons">
+              <span class="icon-wrap">
+                <i class="fa-solid fa-chart-simple"></i>
+              </span>
+            </div>
+            <h4>Visualize it</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi a
+              suscipit ipsa omnis.
+            </p>
+          </div>
+
+          <div class="icon-box">
+            <div class="icons">
+              <span class="icon-wrap">
+                <i class="fa-solid fa-handshake-simple"></i>
+              </span>
+            </div>
+            <h4>Visualize it</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi a
+              suscipit ipsa omnis.
+            </p>
+          </div>
+
+          <div class="icon-box">
+            <div class="icons">
+              <span class="icon-wrap">
+                <i class="fa-solid fa-briefcase"></i>
+              </span>
+            </div>
+            <h4>Visualize it</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi a
+              suscipit ipsa omnis.
+            </p>
+          </div>
+        </div>
+        <!-- icon box end-->
+      </div>
+    </div>
+  </body>
+</html>

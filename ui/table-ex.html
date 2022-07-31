@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Nanum+Gothic&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-size: 14px;
+        font-family: "Montserrat", sans-serif;
+        background-color: #ccc;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      select,
+      button,
+      input {
+        border: 0;
+        outline: 0;
+        background-color: transparent;
+        cursor: pointer;
+      }
+      /* reset end */
+      .table-wrap {
+        width: 70%;
+        margin: 50px auto;
+        box-shadow: 0 0 20px #aaa;
+      }
+      tr:nth-child(even) {
+        background: white;
+      }
+      tr:nth-child(odd) {
+        /*2n + 3 라고 써도 됨*/
+        background: rgb(210, 233, 210);
+      }
+      tr:nth-child(1) {
+        height: 70px;
+        text-align: center;
+        background-color: black;
+        color: white;
+      }
+      tr:nth-child(n + 2) {
+        height: 60px;
+      }
+
+      td:nth-child(1) {
+        width: 25%;
+      }
+
+      td:nth-child(n + 2) {
+        width: 10.7%;
+        text-align: center;
+      }
+
+      td {
+        padding: 0 25px;
+      }
+      tr:hover td {
+        background: #b1b1b1;
+      }
+      /* tr:hover {
+        background-color: red;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="table-wrap">
+      <table class="hover">
+        <tr class="title_line">
+          <th></th>
+          <th>SUNDAY</th>
+          <th>MONDAY</th>
+          <th>TUESDAY</th>
+          <th>WEDNESDAY</th>
+          <th>THURSDAY</th>
+          <th>FRIDAY</th>
+          <th>SATURDAY</th>
+        </tr>
+        <tr>
+          <td>Will Smith</td>
+          <td>8:00AM</td>
+          <td>-</td>
+          <td>-</td>
+          <td>8:00AM</td>
+          <td>-</td>
+          <td>5:00PM</td>
+          <td>8:00AM</td>
+        </tr>
+        <tr>
+          <td>Paul Rudd</td>
+          <td>-</td>
+          <td>5:00PM</td>
+          <td>5:00PM</td>
+          <td>-</td>
+          <td>9:00AM</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Chris Evans</td>
+          <td>9:00AM</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>2:00PM</td>
+          <td>8:00AM</td>
+        </tr>
+        <tr>
+          <td>Adam Sandler</td>
+          <td>-</td>
+          <td>5:00PM</td>
+          <td>5:00PM</td>
+          <td>-</td>
+          <td>9:00AM</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Akshay Kumar</td>
+          <td>8:00AM</td>
+          <td>-</td>
+          <td>-</td>
+          <td>8:00AM</td>
+          <td>-</td>
+          <td>5:00PM</td>
+          <td>8:00AM</td>
+        </tr>
+        <tr>
+          <td>Robert Downey Jr.</td>
+          <td>-</td>
+          <td>5:00PM</td>
+          <td>5:00PM</td>
+          <td>-</td>
+          <td>9:00AM</td>
+          <td>-</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Chris Hemsworth</td>
+          <td>9:00AM</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>-</td>
+          <td>2:00PM</td>
+          <td>8:00AM</td>
+        </tr>
+        <tr>
+          <td>Dwayne Johnson</td>
+          <td>8:00AM</td>
+          <td>-</td>
+          <td>-</td>
+          <td>8:00AM</td>
+          <td>-</td>
+          <td>5:00PM</td>
+          <td>8:00AM</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

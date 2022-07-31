@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Layout01</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <style>
+      .container {
+        background-color: pink;
+        display: flex;
+        /* justify-content: flex-start; 왼쪽 정렬 */
+        /* justify-content: flex-end; 오른쪽 정렬 */
+        /* justify-content: center; 가운데 */
+        justify-content: space-between;
+        /* justify-content: space-around; 여백 일정하게 배치.. */
+
+        height: 100vh;
+        align-items: flex-end; /*밑에서 시작*/
+        align-items: center; /*높이 값을 줘야 사용가능*/
+        align-items: flex-start; /*위에서 시작*/
+
+        flex-direction: column; /*세로배치*/
+        flex-direction: row; /*기본, 가로배치*/
+      }
+      .item {
+        width: 100px;
+        height: 100px;
+        background-color: steelblue;
+        color: white;
+        /* margin: 10px; */
+        padding: 20px;
+      }
+      .item:first-child {
+        /*align-self: flex-end; /*self = 지정한 것만.. 잘안쓰임 ㅎ*/
+        /*order: 3; /*order 는 순서바꾸는거..*/
+      }
+      .item:nth-child(2) {
+        /* order: 1; */
+      }
+      .item:last-child {
+        /* order: 2; */
+        /*align-self: flex-start; /*self = 지정한 것만.. 잘안쓰임 ㅎ*/
+      }
+
+      /* float은 자기 본인한테
+      grid나 flex는 상위에. */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item">box 1</div>
+      <div class="item">box 2</div>
+      <div class="item">box 3</div>
+    </div>
+  </body>
+</html>

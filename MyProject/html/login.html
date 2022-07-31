@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YES INTERIOR SHOP Login</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="header-logo">
+          <span>
+            <a href="index.html"><img src="../img/yes-interior-logo-removebg-preview.png" alt=""/>
+            </a></span>
+        </h1>
+        <div class="header-my">
+          <ul class="my-function">
+            <li><a class="login-page" href="login.html">LOGIN</a></li>
+            <li><a class="signup-page" href="signup.html">JOIN</a></li>
+            <li><a href="#">CART</a></li>
+            <li><a href="#">ORDER</a></li>
+            <li><a href="#">MYPAGE</a></li>
+          </ul>
+          <div class="search">
+            <i class="fa-solid fa-magnifying-glass"><input type="text" /></i>
+          </div>
+        </div>
+      </header>
+<!-- main header  -->
+
+    <div class="login-wrap">
+      <div class="login-box">
+        <h1>Login</h1>
+        <form
+          method="post"\
+          action="../admin/index.html"
+          enctype="multipart/form-data"
+        >
+        
+          <div class="userid-wrap">
+            <label>Userid</label>
+            <input
+              type="text"
+              name="userid"
+              class="userid"
+              id="userid"
+              placeholder="userid"
+              required
+            />
+          </div>
+          <div class="passwd-wrap">
+            <label>Password</label>
+            <input
+              type="password"
+              name="passwd"
+              class="passwd"
+              id="passwd"
+              placeholder="passwd"
+              required
+            />
+          </div>
+          <p class="text" id="text"></p>
+          <div class="signLink">
+            <a href="signup.html">Don't you have an account?</a>
+          </div>
+          <div>
+            <button type="submit" class="btn">Login</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      const inputId = document.querySelector(".userid");
+      const inputPasswd = document.querySelector(".passwd");
+      const DomText = document.querySelector(".text");
+      const loginBtn = document.querySelector(".btn");
+
+      // 로그인 함수
+      const login = () => {
+        alert("login");
+        location.href = 'index.html';
+      };
+
+      // Input(사용자입력칸)에 입력되었는지 체크하는 함수
+      const checkInput = (inputId, inputPasswd) => {
+
+
+        if (inputId.value == "") {
+          printAlert("아이디");
+          inputId.focus();
+          return false;
+        }
+
+        if (inputPasswd.value == "") {
+          printAlert("비밀번호");
+          inputPasswd.focus();
+          return false;
+        }
+
+        return true;
+      };
+      const printAlert = (text) => {
+        DomText.innerHTML = `<b>${text}를 입력하세요.</b>`;
+      };
+
+      const noticeNoMember = () => {
+        DomText.innerHTML = `<b>존재하지 않는 회원입니다.</b>`;
+      };
+
+      const handleLogin = (event) => {
+        event.preventDefault();
+
+
+        if (!checkInput(inputId, inputPasswd)) return;
+
+
+        if (userid.value == "123" && passwd.value == "123") {
+          login();
+        } else {
+          noticeNoMember();
+        }
+      }
+
+        document.querySelector(".btn").addEventListener("click", handleLogin);
+
+    </script>
+  </body>
+</html>

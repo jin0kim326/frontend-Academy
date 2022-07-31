@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Busan it Website login</title>
+    <style>
+      /* reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      input,
+      button {
+        border: 0;
+        outline: 0;
+      }
+      /* dd */
+      /* reset end */
+      .login-box {
+        width: 400px;
+        margin: 200px auto;
+      }
+      label {
+      }
+      input {
+        border: 1px solid rgb(240, 176, 198);
+        padding: 5px 8px;
+        margin: 3px;
+      }
+
+      button {
+        width: 300px;
+        background-color: rgb(240, 176, 198);
+        color: white;
+        padding: 8px 12px;
+        border-radius: 3px;
+        cursor: pointer;
+        border: 2px solid transparent;
+      }
+      button:hover {
+        background-color: transparent;
+        color: rgb(240, 176, 198);
+        border: 2px solid rgb(240, 176, 198);
+      }
+    </style>
+  </head>
+  <body>
+    <form method="post" action="check.do">
+      <!-- post - 보안 / get - 속도 -->
+      <!-- action 에는 처리 할 파일 이름.. 로그인 내용이 맞는지 -->
+      <div class="login-box">
+        <label for="userid">UserID</label>
+        <!-- 라벨은 for로 별명짓기함.. -->
+        <input
+          type="text"
+          placeholder="아이디를 입력하세요."
+          required
+          name="userid"
+        /><br />
+        <label for="passwd">Password</label>
+        <input
+          type="password"
+          placeholder="비밀번호를 입력하세요."
+          required
+          name="passwd"
+        /><br />
+        <!-- <input type="button" value="Login" />
+      <input type="submit" value="Login" /> -->
+        <button type="submit">Login</button>
+      </div>
+    </form>
+  </body>
+</html>

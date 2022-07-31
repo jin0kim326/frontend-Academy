@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>부산 아이티 메인페이지 입니다.</title>
+  </head>
+  <body>
+    <button onClick="popupOpen('./child_pop.html','', 500, 400);">
+      팝업 열기
+    </button>
+    <script>
+      function popupOpen(url, nick, width, height) {
+        let screen = "";
+        let left = (screen.availWidth - width) / 2;
+        let top = (screen.availHeight - height) / 2;
+
+        /*window.open(자식파일이름, 별명, 옵션) 보통 옵션은 뭉쳐서 넣으니까 넓이,높이를 하나로해보겠음*/
+        //alert("ok");
+        //window.open("child_pop.html", "", "");
+        //let screen = "width =" + w + ", height =" + h; + ", top = " + 300 +", left = " +500; 창을 위,왼쪽에서부터 띄우도록
+        //left = 300, top =500, width =300, height =100   //???????//
+        screen =
+          "left=" +
+          left +
+          ", top=" +
+          top +
+          ", width=" +
+          width +
+          ", height=" +
+          height;
+        window.open(url, nick, screen);
+
+        //alert(Screen);
+      }
+    </script>
+  </body>
+</html>

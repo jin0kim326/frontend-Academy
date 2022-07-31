@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home > 게시판 > 공지사항 > 목록보기</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-size: 14px;
+        font-family: "Nanum Gothic", sans-serif;
+      }
+      table {
+        border-collapse: collapse;
+        /* 두줄을? 한줄처럼. */
+        width: 100%;
+      }
+      select,
+      button,
+      input {
+        border: 0;
+        outline: 0;
+        background-color: transparent;
+        cursor: pointer;
+      }
+      /* reset end */
+      .tbl-wrap {
+        width: 80%;
+        margin: 50px auto;
+      }
+      .page-top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 10px 0px;
+      }
+      .page-top h2 {
+        font-size: 14px;
+      }
+      tr:first-child {
+        height: 50px;
+        text-align: center;
+        font-weight: bold;
+        background-color: rgb(189, 200, 250);
+      }
+      tr:nth-child(2) {
+        height: 50px;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+      }
+      tr:nth-child(2):hover {
+        background-color: rgba(255, 255, 115);
+        cursor: pointer;
+      }
+      tr:nth-child(3) {
+        height: 50px;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+      }
+      tr:nth-child(3):hover {
+        background-color: rgb(255, 255, 115);
+        cursor: pointer;
+      }
+      td {
+        /* border: 1px solid #ccc; */
+      }
+      td:first-child {
+        width: 10%;
+      }
+      /* fist안쓰고 nth줘도 됨 */
+      td:nth-child(2) {
+        width: 50%;
+      }
+      /* 나머지칸 하나는 안써도됨.. */
+      td:nth-child(3) {
+        width: 20%;
+      }
+      td:nth-child(4) {
+        width: 10%;
+      }
+
+      td:last-child {
+        width: 10%;
+      }
+      .page-bottom {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .start_num {
+        background-color: rgb(171, 186, 253);
+        color: white;
+        display: inline-block;
+        /* 인라인을 블록타입 처럼 사용할때
+        인라인타입은 width, height 설정이 안됨.. */
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        border-radius: 3px;
+        cursor: pointer;
+        border: 1px solid transparent;
+        /* hover줄때 움찔거리는건 border 조정.. */
+      }
+      .start_num:hover {
+        color: rgb(171, 186, 253);
+        background-color: white;
+        border: 1px solid rgb(171, 186, 253);
+        transition: 0.1s;
+        /* hover줄때 움찔거리는건 border 조정.. */
+      }
+      .page-bottom {
+        margin: 10px 0px;
+      }
+      select {
+        width: 100px;
+        height: 29px;
+        border: 1px solid #ccc;
+      }
+      input {
+        border: 1px solid #ccc;
+        width: 170px;
+        height: 29px;
+      }
+      button {
+        background-color: rgb(171, 186, 253);
+        color: white;
+        padding: 6px 12px;
+        border-radius: 3px;
+        vertical-align: bottom;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tbl-wrap">
+      <div class="page-top">
+        <h2>부산IT > 게시판 > 공지사항</h2>
+        <span class="total">전체 게시물 : <strong>142</strong>건</span>
+      </div>
+      <table>
+        <tr>
+          <td>번호</td>
+          <td>제목</td>
+          <td>글쓴이</td>
+          <td>조회</td>
+          <td>날짜</td>
+        </tr>
+        <!-- for 반복문 -->
+        <tr>
+          <td>1</td>
+          <td style="text-align: left">
+            <strong>안녕하세요. 부산IT아카데미 입니다.</strong>
+          </td>
+          <td>관리자</td>
+          <td>20</td>
+          <td>2022.07.07</td>
+        </tr>
+        <!-- for 반복문 -->
+        <tr>
+          <td>2</td>
+          <td style="text-align: left">공지사항</td>
+          <td>관리자</td>
+          <td>1480</td>
+          <td>2022.06.01</td>
+        </tr>
+      </table>
+      <div class="page-bottom">
+        <div class="page-wrap">
+          <span class="start_num">1</span>
+          <span class="start_num">2</span>
+          <span class="start_num">3</span>
+          <span class="start_num">4</span>
+          <span class="start_num">5</span>
+        </div>
+        <form
+          method="post"
+          action="boardSearch.do"
+          name="frm"
+          id="frm"
+          class="frm"
+        >
+          <!-- 매우 중요 ! form -->
+          <div class="page-search">
+            <!-- <input type="radio" name="open" /> 공개게시물
+            <input type="radio" name="open" /> 비공개게시물
+            name을 똑같이 만들어야 하나만 선택 가능하도록 됨 -->
+            <!-- --------------------------------------------- -->
+            <!-- <input type="radio" name="fishing" /> 낚시
+            <input type="radio" name="climbing" /> 등산
+            <input type="radio" name="movie" /> 영화
+            <input type="radio" name="reading" /> 독서
+            name을 다르게 만들어야 여러개 선택 가능하도록 됨 -->
+            <select>
+              <option value="">제목</option>
+              <option value="">제목+내용</option>
+              <option value="">글쓴이</option>
+            </select>
+            <input type="text" required />
+            <button type="submit">검색</button>
+          </div>
+        </form>
+        <div class="page-write-btn"><button type="button">글쓰기</button></div>
+      </div>
+
+      <!-- paging, pagination 페이지 -->
+    </div>
+  </body>
+</html>

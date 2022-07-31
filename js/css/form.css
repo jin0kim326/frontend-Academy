@@ -1,0 +1,102 @@
+@charset 'utf-8';
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f1f1f1;
+  font-family: "Open Sans", sans-serif;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.signup-box {
+  background-color: white;
+  border-radius: 5px;
+  width: 400px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.header {
+  padding: 20px 40px;
+  background-color: white;
+  border-bottom: 1px solid rgba(219, 40, 40, 0.3);
+}
+.form {
+  /* form 상위에 있는 div에 줘도 됨. */
+  padding: 30px 40px;
+}
+.form-control {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+  /* 기준점을 감싸고있는 부모태그로 변경 */
+}
+
+.form-control input {
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 10px;
+  width: 100%;
+}
+
+.form-control input:focus {
+  /* 마우스 찍으면 */
+  outline: none;
+  /* 0 = none */
+  border-color: #777;
+}
+.form-control i {
+  position: absolute;
+  top: 35px;
+  right: 15px;
+  display: none;
+}
+.form-control.success input {
+  /* 내가 success라는 이름을 써서 쓰는거임. 만들어진게아니고 */
+  border: 1px solid #2ecc71;
+}
+.form-control.success i.fa-check-circle {
+  color: #2ecc71;
+  display: block;
+}
+
+.form-control.error input {
+  /* 클래스 붙이는거라서??? .error 띄우면 안됨 */
+  border: 1px solid #e74c3c;
+}
+.form-control.error i.fa-exclamation-circle {
+  color: #e74c3c;
+  display: block;
+}
+.form-control small {
+  display: none;
+}
+.form-control.error small {
+  display: block;
+}
+.form button {
+  background-color: #db2828;
+  border: 2px solid #db2828;
+  border-radius: 4px;
+  color: white;
+  padding: 10px 0;
+  font-family: inherit;
+  /* 페이지의 부모인 body의 글씨체를 그대로 받아씀 */
+  width: 100%;
+  cursor: pointer;
+}
+/* .display {
+  display: block;
+} */
+
+/* 정규식 중요! */
+/* Boolean : true, false
+is 로 시작함. */

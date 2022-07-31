@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/register.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+  </head>
+  <body>
+    <div class="Signupbox-wrap">
+      <div class="Signup-title">
+        <h1>Sign up</h1>
+        <hr />
+      </div>
+      <form
+        method="post"
+        action="Signup_check.do "
+        name="frm"
+        id="frm"
+        class="frm"
+        enctype="multipart/form-data"
+      >
+        <div class="input-wrap">
+          <input
+            type="text"
+            name="userid"
+            id="userid"
+            class="userid input"
+            placeholder="UserID"
+            autofocus
+          />
+          <p>this is error message</p>
+          <input
+            type="password"
+            name="passwd"
+            id="passwd"
+            class="passwd input"
+            placeholder="Password"
+          />
+          <p>this is error message</p>
+          <input
+            type="password"
+            name="confirm-passwd"
+            id="confirm-passwd"
+            class="confirm-passwd input"
+            placeholder="Confirm Passwd"
+          />
+          <p>this is error message</p>
+          <input
+            type="text"
+            name="email"
+            id="email"
+            class="email input"
+            placeholder="Email"
+          />
+          <p>this is error message</p>
+          <input
+            type="tel"
+            name="tel"
+            id="tel"
+            class="tel input"
+            placeholder="Phone Numeber"
+          />
+          <p>this is error message</p>
+          <div class="rdoGrp"> 
+            Gender&ensp;: &ensp;
+            <input type="radio" name="gender" value="1" /><span>남자</span>
+            <input type="radio" name="gender" value="2" /><span>여자</span>  
+        </div>
+        <p>this is error message</p>
+        <div class="button-wrap">
+          <a class="login-page-link" href="login.html"
+            >If you have an account, then login now!</a
+          >
+          <button type="submit">Sign up</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

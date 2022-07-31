@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>radion - e.currentTarget.checked</title>
+    <!-- radio name 모두 동일, value는 달라도 됨. -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        //객체, 배열 array -> 반복문, forEach
+        const radios = document.querySelectorAll("[name=books]");
+        const p = document.querySelector("p");
+
+        radios.forEach((radio) => {
+          // 당신이 선택한 것.. --> e.currentTarget으로 찾아낼 수 있음.
+          radio.addEventListener("change", (e) => {
+            if (e.currentTarget.checked) {
+              p.textContent = `${e.currentTarget.value}`;
+            }
+          });
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h2>it 서적을 선택하세요</h2>
+    <input type="radio" name="books" value="java" /> Java
+    <input type="radio" name="books" value="spring" /> Spring
+    <input type="radio" name="books" value="node" /> NodeJS
+    <input type="radio" name="books" value="react  " /> ReactJS
+    <p></p>
+  </body>
+</html>

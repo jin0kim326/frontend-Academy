@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1
+      //   const fruits = ["orange", "apple", "peach"];
+      //   for (let i=0; i<fruits.length; ++i) {
+      //     console.log(`${i}번째 : ${fruits[i]}`);
+      //   }
+
+      // 2
+      //   const fruits = ["orange", "apple", "peach"];
+      //   //for(데이터타입 별명 : 배열){}
+      //   for (let i in fruits) {
+      //     console.log(`${i}번째 ${fruits[i]}`);
+      //   }
+
+      // 3
+      // forEach : 배열명.forEach()   ==> 이것도 알아두기
+      //   const fruits = ["orange", "apple", "peach"];
+      //   //fruits.forEach((value, index));
+      //   fruits.forEach((value, index) => {
+      //     console.log(`${index}번째 ${value}`);
+      //   });
+
+      // 4   중요도 4>3>2>1
+      // for(반복) -> 한번 가공 -> map(반복)  //for작업을 가공해서쓰는............?
+      // map은 좀 복잡한거 할때 쓰는데 3-4번 꼭 알아두면 좋음.
+      // 배열명.map();
+      // 참조 객체는 const 써야 오류안남 //  for 은 let
+      const fruits = [100, 200, 300];
+
+      //sum은 변수형태지만 배열이 들어가서 배열형태로 출력
+      const sum = fruits.map((value, index) => {
+        return value * value;
+      });
+      console.log(sum);
+      fruits.forEach(console.log);
+      // 위 아래 둘다 콘솔에 출력하는건데 조금 다름.
+    </script>
+  </body>
+</html>

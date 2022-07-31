@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="heading">여기를 클릭하세요.</div>
+    <script>
+      const heading = document.querySelector("#heading");
+      /*1
+        document.querySelector("#heading").onclick = function () {
+          document.querySelector("#heading").style.color = "red";
+        };
+        */
+      //-------------------------------------
+
+      /*2
+      heading.onclick = function () {
+        heading.style.backgroundColor = "red";
+        heading.style.color = "white";
+      };
+      */
+      // js는 -쓰면 인식x 이어지는 글자 대문자로 쓰면됨
+
+      //-------------------------------------
+
+      /*3
+      document.getElementById("heading").addEventListener("click", function () {
+        document.getElementById("heading").style.color = "red";
+        document.getElementById("heading").style.backgroundColor = "white";
+      });
+    */
+    </script>
+  </body>
+</html>

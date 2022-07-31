@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>grid</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template-areas:
+          "header header header"
+          "nav main aside"
+          "footer footer footer";
+        height: 100vh;
+        grid-template-columns: 15% auto 20%;
+        grid-template-rows: 100px auto 80px;
+        /* 세로 넓이는 % 안씀 */
+      }
+
+      header,
+      nav,
+      main,
+      aside,
+      footer {
+        background-color: steelblue;
+        color: white;
+        border: 1px solid white;
+        padding: 10px;
+      }
+      header {
+        grid-area: header;
+        /* 그리드 편하게 할 수 있게 별명 짓기 , 똑같은 이름을 주면 좋음 */
+      }
+      nav {
+        grid-area: nav;
+      }
+      main {
+        grid-area: main;
+      }
+      aside {
+        grid-area: aside;
+      }
+      footer {
+        grid-area: footer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>Header</header>
+      <nav>Navigation</nav>
+      <main>main</main>
+      <aside>aside</aside>
+      <footer>footer</footer>
+    </div>
+  </body>
+</html>

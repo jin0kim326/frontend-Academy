@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DomContentLoaded</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        /*
+        const headings = document.querySelector("h1");
+        headings.textContent = "Hello";
+        //headings에 글자를 넣어줘
+        headings.style.color = "white";
+        headings.style.backgroundColor = "tomato";
+        headings.style.padding = "20px";
+        */
+        // 배열명(복수).forEach((단수형) => {})
+        // headings.forEach((별명-단수형) => {})
+        // Object(객체, 배열) 타입으로 저장 = querySelectorAll
+        const headings = document.querySelectorAll("h1");
+        headings.forEach((heading) => {
+          heading.textContent = "Seoul it";
+          heading.style.color = "white";
+          heading.style.backgroundColor = "black";
+          heading.style.padding = "20px";
+          heading.style.borderRadius = "10px";
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- 글자 색, 배경 색, 패딩 -->
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+  </body>
+</html>

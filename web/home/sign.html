@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width= , initial-scale=1.0" />
+    <title>Sign In</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      ul li {
+        list-style: none;
+      }
+      a {
+        color: #222;
+        text-decoration: none;
+      }
+      /* reset end */
+      body {
+        background-color: #e7e7e7;
+        font-family: "Poppins", sans-serif;
+      }
+      .signIn-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+      }
+      .signIn-box {
+        background-color: white;
+        box-shadow: 0 0 10px 3px lightsteelblue;
+        padding: 40px 50px;
+        border: 1px solid rgba(34, 36, 38, 0.2);
+        border-radius: 7px;
+        width: 400px;
+        height: 550px;
+      }
+      .signIn-box h1 {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+      label {
+        font-size: 14px;
+      }
+      input {
+        border: 0;
+        outline: 0;
+        border: 1px solid #e7e7e7;
+        border-radius: 3px;
+        width: 100%;
+        padding: 8px 4px;
+        margin-bottom: 15px;
+      }
+      .message {
+        height: 20px;
+        font-size: 11px;
+      }
+      .already-signIn {
+        font-size: 12px;
+        font-weight: bold;
+        margin-top: 15px;
+        color: lightcoral;
+      }
+      .signIn-btn {
+        border: 0;
+        background-color: rgb(100, 150, 219);
+        color: white;
+        padding: 10px 17px;
+        font-size: 13px;
+        border-radius: 3px;
+        float: right;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+      ::placeholder {
+        color: rgba(100, 150, 219, 0.7);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="signIn-wrap">
+      <div class="signIn-box">
+        <h1>Sign In</h1>
+        <form
+          method="post"
+          action="./admin/index.html"
+          enctype="multipart/form-data"
+        >
+          <div class="userName-wrap">
+            <label>Username</label>
+            <input
+              type="text"
+              name="username"
+              class="username"
+              id="username"
+              placeholder="username"
+              required
+            />
+          </div>
+          <div class="identification-wrap">
+            <label>Identificaiton</label>
+            <input
+              type="text"
+              name="identification"
+              class="identification"
+              id="identification"
+              placeholder="Identification"
+              required
+            />
+          </div>
+          <div class="passwd-wrap">
+            <label>Password</label>
+            <input
+              type="password"
+              name="passwd"
+              class="passwd"
+              id="passwd"
+              placeholder="passwd"
+              required
+            />
+          </div>
+          <div class="re-passwd-wrap">
+            <label>Re-Password</label>
+            <input
+              type="password"
+              name="re-passwd"
+              class="re-passwd"
+              id="re-passwd"
+              placeholder="passwd"
+              required
+            />
+          </div>
+        </form>
+        <p class="message"></p>
+        <p class="already-signIn">Already reegistered sign in?</p>
+        <button class="signIn-btn" type="submit">Sign in</button>
+      </div>
+    </div>
+  </body>
+</html>

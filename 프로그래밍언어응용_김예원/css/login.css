@@ -1,0 +1,76 @@
+body {
+  background-color: lightgoldenrodyellow;
+}
+.loginbox-wrap {
+  background-color: white;
+  width: 500px;
+  height: 400px;
+  position: absolute;
+  left: calc(50% - 250px);
+  top: calc(50% - 200px);
+  padding: 30px;
+  border-radius: 8px;
+}
+.login-title {
+}
+.login-title h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+form {
+}
+.input-wrap {
+  margin-top: 10px;
+  padding: 20px 30px;
+}
+
+.userid,
+.passwd {
+  margin-bottom: 20px;
+  width: 100%;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid rgb(175, 175, 175);
+}
+.userid:focus,
+.passwd:focus {
+  border: 1px solid black;
+}
+.userid {
+  padding-left: 40px;
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position: 10px 10px;
+  background-image: url(../img/user-solid.jpg);
+}
+.passwd {
+  padding-left: 40px;
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position: 10px 10px;
+  background-image: url(../img/lock-solid.jpg);
+}
+.button-wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+.signup-page-link {
+  font-size: 14px;
+  line-height: 40px;
+  align-content: center;
+}
+.button-wrap button {
+  padding: 8px 25px;
+  font-size: 15px;
+  background-color: darkseagreen;
+  color: white;
+  border-radius: 3px;
+  border: 1px solid darkseagreen;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+.button-wrap button:hover {
+  background-color: rgb(50, 120, 80);
+  border: 1px solid rgb(50, 120, 80);
+}

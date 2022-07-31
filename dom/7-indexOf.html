@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>indexOf('@') , indexOf(".")</title>
+    <!-- @ 뒤쪽에 있는 값의 . 여부를 확인 -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const input = document.querySelector("input");
+        const p = document.querySelector("p");
+
+        function isEmail(value) {
+          // zinny26@nate.com
+          // indexOf는 안에 @가 있는지 여부
+          // arr0 = zinny26
+          // arr1 = nate.com
+          return value.indexOf("@") > 1 && value.split("@")[1].indexOf(".") > 1;
+        } //split 은 쪼갠다 -> @ 기준으로 나눈다
+
+        input.addEventListener("keyup", (e) => {
+          const val = e.currentTarget.value;
+          //   console.log(e.currentTarget.value);
+          //   currentTarget 현재 누른 그것
+          // @ 체크
+          // @ 뒤에 값에 .가 있으면 ok 아니면 no
+          if (!isEmail(val)) {
+            p.style.color = "tomato";
+            p.style.fontWeight = "bold";
+            p.textContent = `입력하신 ${val} 는 유효하지 않은 이메일입니다`;
+          } else {
+            p.style.color = "steelblue";
+            p.style.fontWeight = "bold";
+            p.textContent = `입력하신 ${val} 는 사용가능한 이메일입니다.`;
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h2>Email 주소를 입력하세요</h2>
+    <input type="text" />
+    <p>이메일을 체크합니다</p>
+  </body>
+</html>

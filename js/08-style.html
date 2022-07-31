@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .active {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="content">
+        <img src="https://loremflickr.com/640/360" alt="dummy" />
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum,
+          optio!
+        </p>
+      </div>
+      <div class="btn-wrap">
+        <button id="open" class="open">open</button>
+        <button id="hide" class="close">close</button>
+      </div>
+    </div>
+    <script>
+      /*
+      function show() {
+        document.getElementById("content").style.display = "block";
+      }
+
+      function hide(e) {
+        e.preventDefault();
+        // e랑 preventDefault 써줘야함..! 아직은 노상관이지만
+        // 나중에 a태그쓰고할때 페이지 넘어가면안되는데
+        // 넘어가는 그런일때문에...~
+        document.getElementById("content").style.display = "none";
+      }
+      */
+      function hide() {
+        document.querySelector("#content").classList.toggle("active");
+      }
+      document.getElementById("hide").addEventListener("click", hide);
+    </script>
+  </body>
+</html>

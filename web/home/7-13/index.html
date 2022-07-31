@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Menu Responsive</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kristi&family=Lato&family=Lora:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      /* reset */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .kristi-font {
+        font-family: "Kristi", cursive;
+      }
+      .lato-font {
+        font-family: "Lato", sans-serif;
+      }
+      .lora-font {
+        font-family: "Lora", serif;
+      }
+      /* 클래스 만들어놓고 적용시킬때마다 html쪽에서 넣어주면 됨 */
+      ul li {
+        list-style: none;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+      }
+      /* reset end */
+
+      .hero-bg {
+        /* 배경이미지는 height가 있어야 보인다. */
+        background-image: url(../images/pc-img.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* 여기까지 필수 */
+        width: 100vw;
+        /* 반응형에서는 vw,vh 쓰면 좋음 */
+        height: 100vh;
+      }
+      .navbar-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+      .top-wrap {
+        /* 사각형 가운데 (가로)정렬
+        margin 0 auto;
+        flex
+        position
+        margin-left margin-right */
+        height: 60px;
+        /* 높이는 %로 주지않는다 그리고 높이값은 설정해놓으면 좋음.. */
+        /* 화면 정 가운데(세로) 글자 배치할 때 calc */
+      }
+      .top-wrap h1 a {
+        color: tomato;
+        font-size: 20px;
+      }
+
+      .top-wrap ul {
+        display: flex;
+      }
+      .top-wrap ul li a {
+        font-size: 13px;
+        font-weight: bold;
+        margin-left: 40px;
+      }
+      .top-wrap ul li a:hover {
+        color: tomato;
+        transition: 0.2s;
+      }
+      .show {
+        display: none;
+      }
+      .hero-content {
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(100vh - 60px);
+        /* calc 안에 - 양쪽 띄어쓰기 꼭 */
+        text-align: center;
+      }
+      .hero-content h2 {
+        /* font-size:100px; 글씨체 기본이 16px이라서 100/16 */
+        font-size: 6.25rem;
+      }
+      .hero-content p {
+        /* font-size:12px */
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+        /* 글자간격 */
+        font-weight: bold;
+      }
+
+      @media (max-width: 1000px) {
+        .hero-bg {
+          background-image: url(../images/tab-img.jpg);
+        }
+        .hero-content h2 {
+          /* font-size:80px; 글씨체 기본이 16px이라서 80/16 */
+          font-size: 5rem;
+        }
+      }
+      @media (max-width: 600px) {
+        .hero-bg {
+          background-image: url(../images/mobile-img.jpg);
+        }
+        .top-wrap {
+          display: none;
+        }
+        .onOff {
+          display: block;
+        }
+        /* js에서 클릭할 때 필요한 class인데, 사용은 classList.add(클래스명); */
+        .open {
+          display: block;
+        }
+        .hero-content h2 {
+          /* font-size:60px; 글씨체 기본이 16px이라서 60/16 */
+          font-size: 3.75rem;
+        }
+
+        .show {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero-bg">
+      <div class="navbar-wrap">
+        <h1><a href="./">TASTY</a></h1>
+        <div class="top-wrap" id="top-wrap">
+          <!-- index.html는 ./ 라고 적어도 같은것. -->
+          <ul class="lato-font">
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">RESTO</a></li>
+            <li><a href="#">MENU</a></li>
+            <li><a href="#">SPECIAL</a></li>
+            <li><a href="#">RESERVATION</a></li>
+            <li><a href="#">GALLERY</a></li>
+            <li><a href="#">CONTACT</a></li>
+            <li><a href="#">ADMIN/LOGIN/SIGNIN</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="show" id="show">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <!-- bg content -->
+      <div class="hero-content">
+        <div>
+          <h2 class="kristi-font">delicious italian food</h2>
+          <p class="lora-font">MAKING DELICIOUS ITALIAN FOOD 1990</p>
+        </div>
+      </div>
+      <!-- bg content end-->
+    </div>
+  </body>
+  <script>
+    // // trigger 버튼 사용을 위해 id(class) 이름 가져오기
+    // // js -> 변수만드는법 (const, let.....var) 요즘은 var안씀.
+    // const show_btn = document.querySelector("#show i");
+    // const navbar = document.querySelector("#top-wrap");
+
+    // // Listener는 동작,이벤트 의미, 메소드(함수)는 무조건 괄호 필요, ()->동작
+    // // (이벤트, 함수명)
+
+    // // function showMenu(){} 이렇게 써도 되지만
+    // //const showMenu = () => {}; //이렇게 쓰는게 좋음
+    // const showMenu = () => {
+    //   //화면에 보이는 동작 처리 : display:block 클래스를 가져오기
+    //   //잘못됐는지 확인해보려면 alert나 console 에 글자 뜨도록 해보면..ㅇㅇ
+    //   navbar.classList.add("open"); //클래스라고 . 붙이면 안됨 & '' 필요함
+    // };
+
+    // // const closeMenu = () => {
+    // //   navbar.classList.remove("open");
+    // // };
+
+    // show_btn.addEventListener("click", showMenu); // 메서드를 위에만듬..?ㅇㅇ
+    const showMenu = document.getElementById("top-wrap");
+    const showBtn = document.querySelector("#show i");
+
+    function showNav() {
+      // alert("ok");
+      showMenu.classList.add("onOff");
+    }
+    showBtn.addEventListener("click", showNav);
+  </script>
+</html>
+
+<!-- bootstrab.ui
+material ui
+semantic ui -->

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ul-li로 navbar 만들기</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      /* PC style*/
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      ul li {
+        list-style: none;
+      }
+      ul li a {
+        text-decoration: none;
+        /* color: black; */
+        color: rgba(0, 0, 0, 0.7);
+        font-size: 18px;
+        margin-right: 40px;
+      }
+      ul li a:hover {
+        color: rgb(255, 178, 36);
+        transition: 0.1s;
+      }
+      button {
+        border: 0;
+        outline: 0;
+      }
+      /* reset end */
+      .container {
+        width: 1400px;
+        margin: 0 auto;
+      }
+      header,
+      .icons-wrap,
+      .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        /* align-items: center; - 세로 가운데 정렬*/
+        align-items: center;
+      }
+      header {
+        padding: 30px 0;
+      }
+      header h1 {
+        font-size: 28px;
+        text-transform: capitalize;
+      }
+      .icon {
+        background-color: rgb(231, 231, 231);
+        margin-right: 5px;
+        cursor: pointer;
+      }
+      .icon:hover {
+        background-color: rgb(255, 178, 36);
+        color: white;
+      }
+      .icon i {
+        margin-right: 10px;
+      }
+
+      /* .icon i:hover {
+        cursor: pointer;
+        color: rgb(255, 166, 0);
+        transition: 0.3s;
+      }*/
+
+      .hero {
+        background-image: url("./images/cook.jpg");
+        background-repeat: no-repeat;
+        /* 사진이 작으면 여러번 반복하게 되어있는데
+        반복하지않도록 설정하는것. */
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        height: 700px;
+      }
+      .hero-content {
+        width: 800px;
+        height: 400px;
+        background-color: rgba(255, 255, 255, 0.7);
+        margin: 0 auto;
+      }
+      .btn {
+        background-color: transparent;
+        border: 1px solid black;
+        padding: 10px 20px;
+        border-radius: 5px;
+      }
+
+      .btn:hover {
+        background-color: rgb(255, 133, 111);
+        transition: 0.3s;
+        color: white;
+        border: 1px solid transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>groco</h1>
+        <ul class="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Categories</a></li>
+          <li><a href="#">Review</a></li>
+          <li><a href="#">Blogs</a></li>
+        </ul>
+        <div class="icons-wrap">
+          <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+          <div class="icon"><i class="fa-solid fa-cart-shopping"></i></div>
+          <div class="icon"><i class="fa-solid fa-user"></i></div>
+        </div>
+      </header>
+    </div>
+
+    <section class="hero">
+      <div class="hero-content">
+        <button class="btn">shop now</button>
+      </div>
+    </section>
+  </body>
+</html>

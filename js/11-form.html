@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>입력폼 체크(basic)</title>
+    <style>
+        *{
+            margin: 0;
+            border: 0;
+            box-sizing: border-box;
+        }
+      body {
+        background-color: #d1d1d1;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+      }
+      .box {
+        background-color: #fff;
+        padding: 10px 30px;
+      }
+      h2{
+        margin-bottom: 10px;
+      }
+      input{
+        outline: none;
+        border: 1px solid #c1c1c1;
+        width: 100%;
+        padding: 5px 0;
+        margin: 3px 0;
+      }
+      ::placeholder{
+        font-size: 12px;
+        color: red;
+        padding: 0 4px;
+      }
+      button{
+        padding: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 수업내용 내 프로젝트에 적용해볼때, 카피본을 만들어서 거기에 테스트.
+    원본은 건들지말기 -->
+    <div class="container">
+      <div class="box">
+        <h2>Login</h2>
+        <!-- return은 프로그램 끝내는거 말고도 넘기는?돌아가는?기능..   -->
+        <form
+        onsubmit="return validateFormCheck();" 
+          method="post"
+          action="login_check.do " 
+          name="frm"
+          id="frm"
+          class="frm"
+          enctype="multipart/form-data"
+        >
+        <!-- action에 login_check.do 와 같이 만든 스프링 파일로 넘어가서 체크하도록 -->
+          <!-- enctype 첨부파일있을때 -->
+          <input
+            type="text"
+            name="userid"
+            id="userid"
+            class="userid"
+            placeholder="아이디를 입력하세요."
+          />
+          <!-- required 뺐음 -->
+      </br>
+          <input
+            type="password"
+            name="passwd"
+            id="passwd"
+            class="passwd"
+            placeholder="비밀번호를 입력하세요."
+          />
+    </br>
+          <!-- <input type="submit" id="" class="" value="로그인" /> -->
+          <button type="submit">로그인</button>
+          <!-- 둘중 하나를 쓰면됨 -->
+        </form>
+      </div>
+    </div>
+    <script>
+        // 지역변수는 스택에저장..되고 이런거 중요
+
+        function validateFormCheck(){
+            //alert('ok');
+            //document.getElementById("userid").value - 이 id에 있는 값을 가져오는..
+            let userid = document.frm.userid;
+            // document.form이름.name이름.value
+            // document.frm.userid 여기서는 id를 쓰는것이 아닌 name 을씀.
+            // form 태그 안에 userid 를 가진 name 에 가진 값을 가져오는..
+            let passwd = document.frm.passwd;
+            // return false = preventDefault()  : 페이지 전환 X 
+            if( userid.value === null || userid.value === '' ){
+                alert('아이디를 입력하세요.');
+               userid.focus();
+                return false;
+            }
+            if( passwd.value === null || passwd.value === '' ){
+                alert('비밀번호를 입력하세요.');
+                passwd.focus();
+                return false;
+            }
+            if( passwd.value.length < 8){
+                alert('비밀번호는 최소 8자리 이상이 되어야 합니다.');
+                passwd.value = "";
+                passwd.focus();
+                return false; //가 없으면 옳은정보인지 체크전에 페이지 넘어가버림
+            }
+        }
+    </script>
+  </body>
+</html>
+<!-- 
+addEvent... -> onSubmit 그외에는
+<form onsubmit = "return 함수명()" -->
+    <!--  
+    (e) 
+    e.preventDefault();
+    확인(검사)가 끝날때 까지는 창을 넘기지 않도록 하는기능
+    매우중요! 
+    -->

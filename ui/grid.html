@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        /* grid-template-rows: 1fr 1fr 2fr; -fr로 어디까지조정가능한가.. */
+        grid-template-rows: 200px 200px 200px;
+        /* grid-column-gap: 20px;
+        grid-row-gap: 20px; */
+        grid-gap: 20px 30px;
+        /* row column */
+      }
+      .box1 {
+        background-color: rgb(241, 182, 182);
+      }
+      .box2 {
+        background-color: rgb(250, 250, 167);
+      }
+      .box3 {
+        background-color: rgb(185, 233, 185);
+      }
+      .box4 {
+        background-color: rgb(247, 220, 148);
+      }
+      .box5 {
+        background-color: rgb(202, 245, 145);
+      }
+      .box6 {
+        background-color: rgb(71, 233, 184);
+      }
+      .box7 {
+        background-color: rgb(132, 226, 243);
+      }
+      .box8 {
+        background-color: rgb(111, 130, 235);
+      }
+      .box9 {
+        background-color: rgb(186, 126, 235);
+      }
+      .box10 {
+        background-color: rgb(235, 109, 214);
+      }
+      .box11 {
+        background-color: rgb(241, 124, 130);
+      }
+      .box12 {
+        background-color: rgb(158, 158, 158);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="grid">
+      <div class="box1">1</div>
+      <div class="box2">2</div>
+      <div class="box3">3</div>
+      <div class="box4">4</div>
+      <div class="box5">5</div>
+      <div class="box6">6</div>
+      <div class="box7">7</div>
+      <div class="box8">8</div>
+      <div class="box9">9</div>
+      <div class="box10">10</div>
+      <div class="box11">11</div>
+      <div class="box12">12</div>
+    </div>
+  </body>
+</html>

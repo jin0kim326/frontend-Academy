@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>가로 세로 : position:absolute;x,y값 필요 -> calc(절대좌표)</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@200;400;700&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      input,
+      button {
+        border: 0;
+        outline: 0;
+        background-color: transparent;
+      }
+      body {
+        background-color: rgb(254, 255, 217);
+        font-family: "Lato", sans-serif;
+      }
+      .login-box-wrap {
+        position: absolute;
+        top: calc(50% - 125px);
+        left: calc(50% - 200px);
+
+        /* 배치할 상자 왼쪽 위 모서리 기준으로 중앙배치됨
+        그래서 상자의 세로 가로의 반씩 빼주면 상자 중앙 기준으로
+        배치됨 */
+      }
+      .login-box {
+        width: 400px;
+        height: 300px;
+        background-color: white;
+        border-radius: 10px;
+        padding: 40px;
+      }
+      .login-box h1 {
+        text-align: center;
+        font-size: 35px;
+        margin-bottom: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="login-box-wrap">
+      <form
+        method="post"
+        action="login_process.do"
+        enctype="multipart/form-data"
+        name="frm"
+        id="frm"
+        class="frm"
+      ></form>
+      <!-- application/x-www-form-urlencoded 는 ajax? -->
+      <!-- process 자리에 save도 쓰고... -->
+      <div class="login-box">
+        <h1>Login</h1>
+        <div class="userid-wrap">
+          <i class="fa-solid fa-user"></i>
+          <label for="userid">UserID</label>
+          <!-- span 써도 되는데 용도 표시 위해서...lable // 아무거나쓰면됨.. -->
+          <input
+            type="text"
+            required
+            name="userid"
+            class="userid"
+            id="userid"
+            maxlength="12"
+            placeholder="Insert ID..."
+          />
+          <!-- disabled 는 입력안되게 막는거. -->
+        </div>
+        <div class="passward-wrap">
+          <i class="fa-solid fa-key"></i>
+          <span>PassWD</span>
+          <input
+            type="password"
+            required
+            name="passwd"
+            class="passwd"
+            id="passswd"
+            maxlength="16"
+            placeholder="Insert PassWD..."
+          />
+        </div>
+        <div class="btn-wrap">
+          <span>Forgot</span>
+          <button type="submit">Sign In</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

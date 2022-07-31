@@ -1,0 +1,51 @@
+<!--  
+const str = {
+    자바스크립트 객체 타입
+    userid:'busan',
+    passwd:'1234'
+
+    json 
+    "userid":'busan',
+    "passwd":'1234'
+};
+
+한명분을 중괄호로 표시
+const str = [{
+
+}]
+
+!!!!!!!!!!!!!!!!!!!!!!! 매우중요함 !!!!!!!!!!!!!!!!!!!!!!!!
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js -> json 데이터 변경</title>
+    <!-- 웹에서 데이터 전송을 주로 글자로 하는데 
+    오류가 나지 않고 원활하게 하려면 json으로 변경하기때문에 중요함 -->
+    <script>
+      // 객체 생성 : 배열[], object(json {}) json은 중괄호
+      const obj = {
+        //key(별명)  value(값)
+        //' ' 으로 넣음(프리티어때문에 ""로 바뀐듯.?)
+        userid: "zinny26",
+        passwd: "1234",
+        username: "부산",
+        email: "zinny26@nate.com",
+        age: 10,
+      }; //한명의 객체 생성 -> java의 new와 같음
+
+      // json 변환 : JSON.stringify(객체이름);
+      // 다시 원래대로 돌릴 때는 JSON.parse(객체이름);
+      console.log(JSON.stringify(obj, null, 2)); //띄어쓰기2칸
+      // "" 로 결과 나오면 json으로 변환된거
+      // 역변환
+      const obj2 = JSON.stringify(obj, null, 2);
+      console.log(JSON.parse(obj2));
+    </script>
+  </head>
+  <body></body>
+</html>

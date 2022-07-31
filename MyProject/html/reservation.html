@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YES INTERIOR SHOP Showroom Reservation</title>
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/reservation.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:wght@500&family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1 class="header-logo">
+          <span>
+            <a href="index.html"
+              ><img
+                src="../img/yes-interior-logo-removebg-preview.png"
+                alt=""
+              /> </a
+          ></span>
+        </h1>
+        <div class="header-my">
+          <ul class="my-function">
+            <li><a class="login-page" href="login.html">LOGIN</a></li>
+            <li><a class="signup-page" href="signup.html">JOIN</a></li>
+            <li><a href="#">CART</a></li>
+            <li><a href="#">ORDER</a></li>
+            <li><a href="#">MYPAGE</a></li>
+          </ul>
+          <div class="search">
+            <i class="fa-solid fa-magnifying-glass"><input type="text" /></i>
+          </div>
+        </div>
+      </header>
+      <!-- main header  -->
+    </div>
+    <div class="reservation-wrap">
+        <div class="reservation-title">
+        <h2>Reservation</h2>
+        <p>쇼룸 방문 예약 게시판입니다.</p>
+    </div>
+        <div class="main-wrap">
+
+            <div class="table-wrap">
+                <table class="table">
+                    <thead></thead>
+                    <tr>
+                        <th>No.</th>
+                        <th>Subject</th>
+                        <th>Name</th>
+                        <th>Registration</th>
+                        <th>Count</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>8</td>
+                        <td>[re] 쇼룸 방문 예약 확인 했습니다.</td>
+                        <td>관리자</td>
+                        <td>2022.07.22</td>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>쇼룸 방문 예약합니다.</td>
+                        <td>김진영</td>
+                        <td>2022.07.22</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>[re] 쇼룸 방문 예약 확인 했습니다.</td>
+                        <td>관리자</td>
+                        <td>2022.07.22</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>쇼룸 방문 예약합니다.</td>
+                        <td>김예원</td>
+                        <td>2022.07.22</td>
+                        <td>24</td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>[re] 쇼룸 방문 예약 확인 했습니다.</td>
+                        <td>관리자</td>
+                        <td>2022.07.19</td>
+                        <td>89</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>쇼룸 방문 예약합니다.</td>
+                        <td>전민경</td>
+                        <td>2022.07.18</td>
+                        <td>104</td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>[re] 쇼룸 방문 예약 확인 했습니다.</td>
+                        <td>관리자</td>
+                        <td>2022.07.13</td>
+                        <td>144</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>쇼룸 방문 예약합니다.</td>
+                        <td>정유진</td>
+                        <td>2022.07.12</td>
+                        <td>158</td>
+                    </tr>
+
+    
+                </tbody>
+                </table>
+            </div>
+            <div class="page">
+                    <div class="page-wrap">
+                        <button class="page_num">&lt;</button>
+                        <button class="page_num">1</button>
+                        <button class="page_num">2</button>
+                        <button class="page_num">3</button>
+                        <button class="page_num">4</button>
+                        <button class="page_num">5</button>
+                        <button class="page_num">&gt;</button>
+                    </div>
+                <button class="write-button"><i class="fa-solid fa-pen"></i></i>write</button>
+            </div>
+            <div class="reservation-search">
+                <form method="post" action="result.do"
+                name="frm" id="frm" class="frm">
+                <select class="search-select" >
+                    <option value="">-- 검색 조건 --</option>
+                    <option value="subject">제목</option>
+                    <option value="content">내용</option>
+                    <option value="writer">글쓴이</option>
+                  </select>
+                <input class="search-text" type="text" placeholder="Search">
+                <button type="submit" class="search-button">
+                    <i class="fa-solid fa-magnifying-glass"></i>search</button>
+                    </form>
+        </div>
+        </div>
+    </div>
+    <script>
+      function selectValidate(){
+        if(document.querySelector(".search-select").value === ""){
+          alert("검색 조건을 선택하세요");
+          return false;
+        }
+        if(document.querySelector(".search-text").value.trim() === ""){
+          alert("검색어를 입력하세요");
+          document.querySelector(".search-text").focus();
+          return false;
+        }
+      }
+      document.querySelector("#frm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        selectValidate();
+      });
+    </script>
+  </body>
+</html>
