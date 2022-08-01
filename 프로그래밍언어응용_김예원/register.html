@@ -18,11 +18,12 @@
     />
     <link rel="stylesheet" href="./css/register.css" />
     <link rel="stylesheet" href="./css/reset.css" />
+    <script src="./js/register.js" defer></script>
   </head>
   <body>
     <div class="Signupbox-wrap">
       <div class="Signup-title">
-        <h1>Sign up</h1>
+        <h1>회원가입</h1>
         <hr />
       </div>
       <form
@@ -33,61 +34,118 @@
         class="frm"
         enctype="multipart/form-data"
       >
+<!-- <i class="fa-solid fa-circle-check"></i> -->
         <div class="input-wrap">
-          <input
+          <input 
             type="text"
             name="userid"
             id="userid"
             class="userid input"
-            placeholder="UserID"
+            placeholder="아이디"
             autofocus
+            
           />
-          <p>this is error message</p>
+          <div class="errorMsg-id error"></div>
           <input
             type="password"
             name="passwd"
             id="passwd"
             class="passwd input"
-            placeholder="Password"
+            placeholder="비밀번호"
           />
-          <p>this is error message</p>
+          <div class="errorMsg-passwd error"></div>
           <input
             type="password"
             name="confirm-passwd"
             id="confirm-passwd"
             class="confirm-passwd input"
-            placeholder="Confirm Passwd"
+            placeholder="확인 비밀번호"
           />
-          <p>this is error message</p>
+          <div class="errorMsg-check-passwd error"></div>
           <input
             type="text"
             name="email"
             id="email"
             class="email input"
-            placeholder="Email"
+            placeholder="이메일"
           />
-          <p>this is error message</p>
+          <div class="errorMsg-email error"></div>
           <input
             type="tel"
             name="tel"
             id="tel"
             class="tel input"
-            placeholder="Phone Numeber"
+            placeholder="전화번호"
           />
-          <p>this is error message</p>
-          <div class="rdoGrp"> 
-            Gender&ensp;: &ensp;
-            <input type="radio" name="gender" value="1" /><span>남자</span>
-            <input type="radio" name="gender" value="2" /><span>여자</span>  
+          <div  class="errorMsg-tel error"></div>
+          <div class="Gender-wrap"> 
+            <i class="fa-solid fa-circle-check"></i>
+            <h4>성별 :</h4>
+            <span class="radio-idv"><input type="radio" name="gender" value="1" />남자</span>
+            <span class="radio-idv"><input type="radio" name="gender" value="2" />여자</span>  
+        <div>this is error message</div>
+      </div>
+        
+        <div class="region-wrap">
+          <i class="fa-solid fa-circle-check"></i>
+          <h4>거주 지역을 선택하세요 : </h4>
+            <select name="region-select" id="region-select" class="region-select">
+              <option value="">서울특별시</option>
+              <option value="">경기도</option>
+              <option value="">인천광역시</option>
+              <option value="">강원도</option>
+              <option value="">충청북도</option>
+              <option value="">충청남도</option>
+              <option value="">대전광역시</option>
+              <option value="">세종특별자치시</option>
+              <option value="">전라북도</option>
+              <option value="">전라남도</option>
+              <option value="">광주광역시</option>
+              <option value="">경상북도</option>
+              <option value="">경상남도</option>
+              <option value="">부산광역시</option>
+              <option value="">울산광역시</option>
+              <option value="">대전광역시</option>
+              <option value="">제주특별자치도</option>
+            </select>
+            <p>지역을 선택하세요</p>
         </div>
-        <p>this is error message</p>
+
+        
+        <div class="hobby-wrap">
+          <i class="fa-solid fa-circle-check"></i>
+          <h4>취미를 선택하세요</h4>
+          <div class="hobby-check-wrap">
+          <input type="checkbox" id="hobby-check" class="hobby-check"><span>등산</span>
+          <input type="checkbox" id="hobby-check" class="hobby-check"><span>음악감상</span>
+          <input type="checkbox" id="hobby-check" class="hobby-check"><span>영화감상</span>
+          <input type="checkbox" id="hobby-check" class="hobby-check"><span>운동,헬스</span>
+          <input type="checkbox" id="hobby-check" class="hobby-check"><span>게임</span>
+          <input type="checkbox" id="hobby-check" class="hobby-check"><span>독서</span>
+          <input type="checkbox" id="hobby-check" class="hobby-check"><span>TV시청</span>
+          <input type="checkbox" id="hobby-check" class="hobby-check"><span>낚시</span>
+          <input type="checkbox" id="hobby-check" class="hobby-check"><span>축구</span>
+          <input type="checkbox" id="hobby-check" class="hobby-check"><span>농구</span>
+          <input type="checkbox" id="hobby-check" class="hobby-check"><span>기타 스포츠</span>
+          <input type="checkbox" id="hobby-check" class="hobby-check"><span>여행</span>
+          </div>
+        </div>
+
+        <div class="introduction-wrap">
+          <i class="fa-solid fa-circle-check"></i>
+          <h4>자기소개서를 작성해주세요.</h4>
+          <textarea name="introduction" id="introduction" cols="70" rows="10"></textarea>
+          <p>입력한 글자수 : 0</p>
+        </div>
+
         <div class="button-wrap">
           <a class="login-page-link" href="login.html"
             >If you have an account, then login now!</a
           >
-          <button type="submit">Sign up</button>
+          <button type="submit" id="signup-btn" class="signup-btn">Sign up</button>
         </div>
       </form>
     </div>
   </body>
+  
 </html>
