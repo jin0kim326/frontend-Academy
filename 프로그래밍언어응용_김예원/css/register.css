@@ -18,8 +18,8 @@ body {
 }
 
 .input-wrap {
-  margin-top: 10px;
-  padding: 20px 60px;
+  padding: 0 60px;
+  position: relative;
 }
 
 .input-wrap .input {
@@ -28,15 +28,13 @@ body {
   padding: 10px;
   border-radius: 3px;
   border: 1px solid rgb(175, 175, 175);
-}
-.input-wrap .input:focus {
-  border: 1px solid black;
-}
-.input-wrap .input {
   padding-left: 40px;
   background-size: 15px;
   background-repeat: no-repeat;
   background-position: 10px 10px;
+}
+.input-wrap .input:focus {
+  border: 1px solid black;
 }
 .userid {
   background-image: url(../img/user-solid.svg);
@@ -59,17 +57,45 @@ body {
   color: red;
   height: 30px;
 }
-.Gender-wrap {
+/* .input-wrap i{
+  position: absolute;
+  top: 12px;
+  right: 70px;
+  display: none;
+} */
+
+.fa-circle-check{
+  position: absolute;
+  top: 12px;
+  right: 70px;
+  display: none;
+}
+
+.change-error {
+  color: red;
+  display: block;
+}
+
+.change-correct {
+  color: green;
+  display: block;
+}
+
+.fa-circle-check.is-show {
+  display: block;
+}
+
+.gender-wrap {
   height: 30px;
   display: flex;
   margin: 20px 0;
 }
-.Gender-wrap input[type="radio"] {
+.gender-wrap input[type="radio"] {
   width: 15px;
   height: 15px;
   /* align */
 }
-.radio-idv{
+.genderRadio{
   margin: 0 10px;
 }
 .region-wrap p{
@@ -88,7 +114,7 @@ body {
 .hobby-check{
   margin-bottom: 10px;
 }
-.Gender-wrap h4,
+.gender-wrap h4,
 .region-wrap h4,
 .hobby-wrap h4,
 .introduction-wrap h4{

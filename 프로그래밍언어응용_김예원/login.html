@@ -18,6 +18,7 @@
     />
     <link rel="stylesheet" href="./css/login.css" />
     <link rel="stylesheet" href="./css/reset.css" />
+    <script src="./js/login.js" defer></script>
   </head>
   <body>
     <div class="loginbox-wrap">
@@ -54,7 +55,8 @@
           <a class="signup-page-link" href="register.html"
             >Don't you have an account?</a
           >
-          <button type="submit">Login</button>
+          <!-- HTML에서 이벤트변수를 받으려면 'event'로 써주기!! -->
+          <button type="submit" id="login-btn" onclick="checkLogin(event)">Login</button>
         </div>
       </form>
     </div>

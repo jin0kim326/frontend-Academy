@@ -9,20 +9,25 @@ const errorMsgEmil = document.querySelector('.errorMsg-email');
 const tel = document.querySelector('#tel');
 const errorMsgTel = document.querySelector('.errorMsg-tel');
 const btn = document.querySelector('#signup-btn');
+const gender = document.querySelector('.genderRadio');
 
-checkID = () => { 
+checkID = (event) => { 
+  const icon = userid.nextElementSibling; 
   if(userid.value === null || userid.value === ''){
     errorMsgID.innerText = '아이디를 입력하세요.';
+    icon.classList.add('change-error');    
     return false;
   }else if(userid.value.length < 9 ){
     errorMsgID.innerText = '아이디는 9자리 이상 입력하세요.';    
+    icon.classList.add('change-error');
     return false;
   }else {
     errorMsgID.innerText = '';
+    icon.classList.add('change-correct');
     return true;
   }
 }
-
+// 초록빨강
 checkPasswd = () => {
   if(passwd.value === null || passwd.value === ''){
     errorMsgPasswd.innerText = '비밀번호를 입력하세요';
@@ -86,10 +91,26 @@ isTelCheck = (tel) => {
   return telRequire.test(tel);
 }
 
+// checkGender = () => {
+//   const radioBtns = document.querySelectorAll('input[name="gender"]');
+//   console.log(radioBtns);
+//   let selectedGender =null;
+
+//   for (const radioBtn of radioBtns) {
+//     console.log('hhh');
+//     if(radioBtn.checked) selectedGender = radioBtn.value;
+    
+//   }
+
+//   console.log(selectedGender);
+
+// }
+
 
 
 checkForm = (event) => {
   event.preventDefault();
+  
   // checkID();  // T or F
   // checkPasswd();  // T or F
   // checkConfirmPasswd(); // T or F
@@ -101,3 +122,11 @@ checkForm = (event) => {
   };  
 }
 btn.addEventListener('click', checkForm);
+  
+  const textarea = document.querySelector('#introduction');
+  const p = document.querySelector(".input-cnt");
+  textarea.addEventListener("keyup", (e) => {
+    //console.log(e);
+    p.textContent = `입력한 글자 수 : ${e.target.value.length}`;
+  });
+
