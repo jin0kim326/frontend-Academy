@@ -1,15 +1,22 @@
 body {
   background-color: lightgoldenrodyellow;
 }
+.container {
+  padding: 50px 0;
+}
 .Signupbox-wrap {
+  margin: 0 auto;
   background-color: white;
   width: 700px;
-  height: 1250px;
-  margin: 150px 0 150px 0;
+  height: auto;
+
+  /*
   position: absolute;
-  left: calc(50% - 350px);
-  top: calc(50% - 625px);
-  padding: 30px;
+  left: calc(50% - 350px); 
+  right: calc(50% - 625px);
+  
+  position은 밑부분 띄우는 것이 안되서 주석처리*/
+  padding: 60px 30px;
   border-radius: 8px;
 }
 .Signup-title h1 {
@@ -82,6 +89,8 @@ body {
   position: absolute;
   top: 12px;
   right: 70px;
+  display: none;
+  /* 아에안나옴 */
 }
 
 .change-error {
@@ -107,26 +116,30 @@ body {
 .genderRadio {
   margin: 0 10px;
 }
+.region-wrap {
+  margin-bottom: 20px;
+}
 .region-wrap p {
   display: inline-block;
 }
 .region-select {
-  margin: 0 0 0 60px;
+  margin: 0 0 20px 60px;
   padding: 6px;
   outline: 0;
 }
 .hobby-wrap {
-  margin: 30px 0px;
   width: 100%;
+  margin-bottom: 30px;
 }
 .hobby-check-wrap {
-  /* margin: 0 auto; */
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   font-size: 15px;
   row-gap: 10px;
-  /* margin: 10px 80px; */
+  width: 80%;
+  margin: 0 auto;
 }
+
 .hobby-check {
   width: 20px;
 }
