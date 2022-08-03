@@ -11,22 +11,27 @@ const errorMsgTel = document.querySelector(".errorMsg-tel");
 const btn = document.querySelector("#signup-btn");
 const regionsel = document.querySelector("#region-select");
 const area = document.querySelector(".region-select");
-const checkIcon = document.querySelector(".check-icon.area");
+
+setError = (messageArea, message, icon) => {
+  messageArea.innerText = message;
+  icon.classList.add("change-error");
+  return false;
+};
+
+setCorrect = (messageArea, icon) => {
+  messageArea.innerText = "";
+  icon.classList.add("change-correct");
+  return true;
+};
 
 checkID = () => {
   const icon = userid.nextElementSibling;
   if (userid.value === null || userid.value === "") {
-    errorMsgID.innerText = "아이디를 입력하세요.";
-    icon.classList.add("change-error");
-    return false;
+    return setError(errorMsgID, "아이디를 입력하세요.", icon);
   } else if (userid.value.length < 9) {
-    errorMsgID.innerText = "아이디는 9자리 이상 입력하세요.";
-    icon.classList.add("change-error");
-    return false;
+    return setError(errorMsgID, "아이디는 9자리 이상 입력하세요.", icon);
   } else {
-    errorMsgID.innerText = "";
-    icon.classList.add("change-correct");
-    return true;
+    return setCorrect(errorMsgID, icon);
   }
 };
 // 초록빨강
@@ -150,6 +155,8 @@ selectValidate = () => {
 };
 
 checkArea = () => {
+  const area = document.querySelector(".region-select");
+  const checkIcon = document.querySelector(".check-icon.area");
   const areaValue = area.value;
 
   // 아래 변수를 직접 테스트해보세요!
@@ -202,14 +209,15 @@ checkForm = (event) => {
   // checkHobby();
 
   if (
-    checkID() &&
-    checkPasswd() &&
-    checkConfirmPasswd() &&
-    checkEmail() &&
-    checkTel() &&
-    checkGender() &&
-    checkArea() &&
-    checkHobby()
+    // checkID() &&
+    // checkPasswd() &&
+    // checkConfirmPasswd() &&
+    // checkEmail() &&
+    // checkTel() &&
+    // checkGender() &&
+    // checkArea() &&
+    // checkHobby()
+    checkArea()
   ) {
     location.href = "login.html";
   }
@@ -220,14 +228,22 @@ btn.addEventListener("click", checkForm);
  * 셀렉트 박스를 바꿨을때 옆에 텍스트도 같이 변경하는 코드
  */
 onChange = () => {
+  const area = document.querySelector(".region-select");
+  const checkIcon = document.querySelector(".check-icon.area");
+
   const regionMsg = document.querySelector(".region-message");
   const areaName = area.options[area.selectedIndex].text;
   const areaValue = area.value;
 
   regionMsg.innerText = areaName;
-  areaValue === null || areaValue === ""
-    ? checkIcon.classList.add("change-error")
-    : checkIcon.classList.add("change-correct");
+
+  if (areaValue === null || areaValue === "") {
+    checkIcon.classList.remove("change-correct");
+    checkIcon.classList.add("change-error");
+  } else {
+    checkIcon.classList.remove("change-error");
+    checkIcon.classList.add("change-correct");
+  }
 };
 area.addEventListener("change", onChange);
 
@@ -243,3 +259,25 @@ textarea.addEventListener("keyup", (e) => {
   //console.log(e);
   p.textContent = `${e.target.value.length} 글자 입니다.`;
 });
+
+const inputs = document.querySelectorAll(".input-wrap input");
+
+onChangeValue = (event) => {
+  console.log(`${event.target.id} :::::`);
+  switch (event.target.id) {
+    case "userid":
+      checkID();
+      break;
+    case "passwd":
+      checkPasswd();
+      break;
+    case "email":
+      checkEmail();
+      break;
+    case "tel":
+      checkTel();
+      break;
+  }
+};
+
+inputs.forEach((input) => input.addEventListener("focusout", onChangeValue));

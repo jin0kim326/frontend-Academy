@@ -85,22 +85,25 @@ body {
   display: none;
 } */
 
-.fa-circle-check {
+.icon {
   position: absolute;
   top: 12px;
   right: 70px;
-  display: none;
-  /* 아에안나옴 */
+  visibility: hidden;
+}
+
+.check-icon {
+  visibility: hidden;
 }
 
 .change-error {
   color: red;
-  display: block;
+  visibility: visible;
 }
 
 .change-correct {
   color: green;
-  display: block;
+  visibility: visible;
 }
 
 .gender-wrap {
