@@ -16,18 +16,20 @@
       href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./css/memberLtdist.css" />
     <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/memberList.css" />
+
     <script src="./js/memberList.js" defer></script>
   </head>
   <body>
-
-<div class="main-wrap">
-  <div class="table-wrap">
-      <table class="table">
+    <div class="main-wrap">
+      <h1>회원관리</h1>
+      <hr />
+      <div class="table-wrap">
+        <table class="table">
           <thead>
-          <tr>
-              <th>전체선택</th>
+            <tr>
+              <th><input type="checkbox" /></th>
               <th>번호</th>
               <th>아이디</th>
               <th>이름</th>
@@ -36,22 +38,20 @@
               <th>성별</th>
               <th>거주지역</th>
               <th>등록일</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr>
-              <td><input type="checkbox"></td>
+              <th>권한</th>
+              <th>접근차단</th>
+              <th>회원상태</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="checkbox" /></td>
               <td>89</td>
               <td>yeniya1004</td>
               <td>김예원</td>
               <td>yeniya1004@naver.com</td>
               <td>01027422695</td>
-              <td>
-              <select name="gender" id="gender" class="gender">
-                <option value="male">남자</option>
-                <option value="female">여자</option>
-              </select>
-              </td>
+              <td>남자</td>
               <td>
                 <select name="resion" id="resion" class="resion">
                   <option value="seoul">서울특별시</option>
@@ -70,518 +70,480 @@
                 </select>
               </td>
               <td>2022.08.02</td>
-          </tr>
-          <tr>
-            <td><input type="checkbox"></td>
-            <td>89</td>
-            <td>yeniya1004</td>
-            <td>김예원</td>
-            <td>yeniya1004@naver.com</td>
-            <td>01027422695</td>
-            <td>
-            <select name="gender" id="gender" class="gender">
-              <option value="male">남자</option>
-              <option value="female">여자</option>
-            </select>
-            </td>
-            <td>
-              <select name="resion" id="resion" class="resion">
-                <option value="seoul">서울특별시</option>
-                <option value="gyeonggi">경기도</option>
-                <option value="incheon">인천광역시</option>
-                <option value="gangwon">강원도</option>
-                <option value="chungcheong">충청도</option>
-                <option value="daejeon">대전광역시</option>
-                <option value="sejong">세종특별자치시</option>
-                <option value="jeolla">전라도</option>
-                <option value="gwangju">광주광역시</option>
-                <option value="gyeongsang">경상도</option>
-                <option value="busan">부산광역시</option>
-                <option value="ulsan">울산광역시</option>
-                <option value="jeju">제주특별자치도</option>
-              </select>
-            </td>
-            <td>2022.08.02</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox"></td>
-          <td>89</td>
-          <td>yeniya1004</td>
-          <td>김예원</td>
-          <td>yeniya1004@naver.com</td>
-          <td>01027422695</td>
-          <td>
-          <select name="gender" id="gender" class="gender">
-            <option value="male">남자</option>
-            <option value="female">여자</option>
-          </select>
-          </td>
-          <td>
-            <select name="resion" id="resion" class="resion">
-              <option value="seoul">서울특별시</option>
-              <option value="gyeonggi">경기도</option>
-              <option value="incheon">인천광역시</option>
-              <option value="gangwon">강원도</option>
-              <option value="chungcheong">충청도</option>
-              <option value="daejeon">대전광역시</option>
-              <option value="sejong">세종특별자치시</option>
-              <option value="jeolla">전라도</option>
-              <option value="gwangju">광주광역시</option>
-              <option value="gyeongsang">경상도</option>
-              <option value="busan">부산광역시</option>
-              <option value="ulsan">울산광역시</option>
-              <option value="jeju">제주특별자치도</option>
-            </select>
-          </td>
-          <td>2022.08.02</td>
-      </tr>
-      <tr>
-        <td><input type="checkbox"></td>
-        <td>89</td>
-        <td>yeniya1004</td>
-        <td>김예원</td>
-        <td>yeniya1004@naver.com</td>
-        <td>01027422695</td>
-        <td>
-        <select name="gender" id="gender" class="gender">
-          <option value="male">남자</option>
-          <option value="female">여자</option>
-        </select>
-        </td>
-        <td>
-          <select name="resion" id="resion" class="resion">
-            <option value="seoul">서울특별시</option>
-            <option value="gyeonggi">경기도</option>
-            <option value="incheon">인천광역시</option>
-            <option value="gangwon">강원도</option>
-            <option value="chungcheong">충청도</option>
-            <option value="daejeon">대전광역시</option>
-            <option value="sejong">세종특별자치시</option>
-            <option value="jeolla">전라도</option>
-            <option value="gwangju">광주광역시</option>
-            <option value="gyeongsang">경상도</option>
-            <option value="busan">부산광역시</option>
-            <option value="ulsan">울산광역시</option>
-            <option value="jeju">제주특별자치도</option>
-          </select>
-        </td>
-        <td>2022.08.02</td>
-    </tr>
-    <tr>
-      <td><input type="checkbox"></td>
-      <td>89</td>
-      <td>yeniya1004</td>
-      <td>김예원</td>
-      <td>yeniya1004@naver.com</td>
-      <td>01027422695</td>
-      <td>
-      <select name="gender" id="gender" class="gender">
-        <option value="male">남자</option>
-        <option value="female">여자</option>
-      </select>
-      </td>
-      <td>
-        <select name="resion" id="resion" class="resion">
-          <option value="seoul">서울특별시</option>
-          <option value="gyeonggi">경기도</option>
-          <option value="incheon">인천광역시</option>
-          <option value="gangwon">강원도</option>
-          <option value="chungcheong">충청도</option>
-          <option value="daejeon">대전광역시</option>
-          <option value="sejong">세종특별자치시</option>
-          <option value="jeolla">전라도</option>
-          <option value="gwangju">광주광역시</option>
-          <option value="gyeongsang">경상도</option>
-          <option value="busan">부산광역시</option>
-          <option value="ulsan">울산광역시</option>
-          <option value="jeju">제주특별자치도</option>
-        </select>
-      </td>
-      <td>2022.08.02</td>
-  </tr>
-  <tr>
-    <td><input type="checkbox"></td>
-    <td>89</td>
-    <td>yeniya1004</td>
-    <td>김예원</td>
-    <td>yeniya1004@naver.com</td>
-    <td>01027422695</td>
-    <td>
-    <select name="gender" id="gender" class="gender">
-      <option value="male">남자</option>
-      <option value="female">여자</option>
-    </select>
-    </td>
-    <td>
-      <select name="resion" id="resion" class="resion">
-        <option value="seoul">서울특별시</option>
-        <option value="gyeonggi">경기도</option>
-        <option value="incheon">인천광역시</option>
-        <option value="gangwon">강원도</option>
-        <option value="chungcheong">충청도</option>
-        <option value="daejeon">대전광역시</option>
-        <option value="sejong">세종특별자치시</option>
-        <option value="jeolla">전라도</option>
-        <option value="gwangju">광주광역시</option>
-        <option value="gyeongsang">경상도</option>
-        <option value="busan">부산광역시</option>
-        <option value="ulsan">울산광역시</option>
-        <option value="jeju">제주특별자치도</option>
-      </select>
-    </td>
-    <td>2022.08.02</td>
-</tr>
-<tr>
-  <td><input type="checkbox"></td>
-  <td>89</td>
-  <td>yeniya1004</td>
-  <td>김예원</td>
-  <td>yeniya1004@naver.com</td>
-  <td>01027422695</td>
-  <td>
-  <select name="gender" id="gender" class="gender">
-    <option value="male">남자</option>
-    <option value="female">여자</option>
-  </select>
-  </td>
-  <td>
-    <select name="resion" id="resion" class="resion">
-      <option value="seoul">서울특별시</option>
-      <option value="gyeonggi">경기도</option>
-      <option value="incheon">인천광역시</option>
-      <option value="gangwon">강원도</option>
-      <option value="chungcheong">충청도</option>
-      <option value="daejeon">대전광역시</option>
-      <option value="sejong">세종특별자치시</option>
-      <option value="jeolla">전라도</option>
-      <option value="gwangju">광주광역시</option>
-      <option value="gyeongsang">경상도</option>
-      <option value="busan">부산광역시</option>
-      <option value="ulsan">울산광역시</option>
-      <option value="jeju">제주특별자치도</option>
-    </select>
-  </td>
-  <td>2022.08.02</td>
-</tr>
-<tr>
-  <td><input type="checkbox"></td>
-  <td>89</td>
-  <td>yeniya1004</td>
-  <td>김예원</td>
-  <td>yeniya1004@naver.com</td>
-  <td>01027422695</td>
-  <td>
-  <select name="gender" id="gender" class="gender">
-    <option value="male">남자</option>
-    <option value="female">여자</option>
-  </select>
-  </td>
-  <td>
-    <select name="resion" id="resion" class="resion">
-      <option value="seoul">서울특별시</option>
-      <option value="gyeonggi">경기도</option>
-      <option value="incheon">인천광역시</option>
-      <option value="gangwon">강원도</option>
-      <option value="chungcheong">충청도</option>
-      <option value="daejeon">대전광역시</option>
-      <option value="sejong">세종특별자치시</option>
-      <option value="jeolla">전라도</option>
-      <option value="gwangju">광주광역시</option>
-      <option value="gyeongsang">경상도</option>
-      <option value="busan">부산광역시</option>
-      <option value="ulsan">울산광역시</option>
-      <option value="jeju">제주특별자치도</option>
-    </select>
-  </td>
-  <td>2022.08.02</td>
-</tr>
-<tr>
-  <td><input type="checkbox"></td>
-  <td>89</td>
-  <td>yeniya1004</td>
-  <td>김예원</td>
-  <td>yeniya1004@naver.com</td>
-  <td>01027422695</td>
-  <td>
-  <select name="gender" id="gender" class="gender">
-    <option value="male">남자</option>
-    <option value="female">여자</option>
-  </select>
-  </td>
-  <td>
-    <select name="resion" id="resion" class="resion">
-      <option value="seoul">서울특별시</option>
-      <option value="gyeonggi">경기도</option>
-      <option value="incheon">인천광역시</option>
-      <option value="gangwon">강원도</option>
-      <option value="chungcheong">충청도</option>
-      <option value="daejeon">대전광역시</option>
-      <option value="sejong">세종특별자치시</option>
-      <option value="jeolla">전라도</option>
-      <option value="gwangju">광주광역시</option>
-      <option value="gyeongsang">경상도</option>
-      <option value="busan">부산광역시</option>
-      <option value="ulsan">울산광역시</option>
-      <option value="jeju">제주특별자치도</option>
-    </select>
-  </td>
-  <td>2022.08.02</td>
-</tr>
-<tr>
-  <td><input type="checkbox"></td>
-  <td>89</td>
-  <td>yeniya1004</td>
-  <td>김예원</td>
-  <td>yeniya1004@naver.com</td>
-  <td>01027422695</td>
-  <td>
-  <select name="gender" id="gender" class="gender">
-    <option value="male">남자</option>
-    <option value="female">여자</option>
-  </select>
-  </td>
-  <td>
-    <select name="resion" id="resion" class="resion">
-      <option value="seoul">서울특별시</option>
-      <option value="gyeonggi">경기도</option>
-      <option value="incheon">인천광역시</option>
-      <option value="gangwon">강원도</option>
-      <option value="chungcheong">충청도</option>
-      <option value="daejeon">대전광역시</option>
-      <option value="sejong">세종특별자치시</option>
-      <option value="jeolla">전라도</option>
-      <option value="gwangju">광주광역시</option>
-      <option value="gyeongsang">경상도</option>
-      <option value="busan">부산광역시</option>
-      <option value="ulsan">울산광역시</option>
-      <option value="jeju">제주특별자치도</option>
-    </select>
-  </td>
-  <td>2022.08.02</td>
-</tr>
-<tr>
-  <td><input type="checkbox"></td>
-  <td>89</td>
-  <td>yeniya1004</td>
-  <td>김예원</td>
-  <td>yeniya1004@naver.com</td>
-  <td>01027422695</td>
-  <td>
-  <select name="gender" id="gender" class="gender">
-    <option value="male">남자</option>
-    <option value="female">여자</option>
-  </select>
-  </td>
-  <td>
-    <select name="resion" id="resion" class="resion">
-      <option value="seoul">서울특별시</option>
-      <option value="gyeonggi">경기도</option>
-      <option value="incheon">인천광역시</option>
-      <option value="gangwon">강원도</option>
-      <option value="chungcheong">충청도</option>
-      <option value="daejeon">대전광역시</option>
-      <option value="sejong">세종특별자치시</option>
-      <option value="jeolla">전라도</option>
-      <option value="gwangju">광주광역시</option>
-      <option value="gyeongsang">경상도</option>
-      <option value="busan">부산광역시</option>
-      <option value="ulsan">울산광역시</option>
-      <option value="jeju">제주특별자치도</option>
-    </select>
-  </td>
-  <td>2022.08.02</td>
-</tr>
-<tr>
-  <td><input type="checkbox"></td>
-  <td>89</td>
-  <td>yeniya1004</td>
-  <td>김예원</td>
-  <td>yeniya1004@naver.com</td>
-  <td>01027422695</td>
-  <td>
-  <select name="gender" id="gender" class="gender">
-    <option value="male">남자</option>
-    <option value="female">여자</option>
-  </select>
-  </td>
-  <td>
-    <select name="resion" id="resion" class="resion">
-      <option value="seoul">서울특별시</option>
-      <option value="gyeonggi">경기도</option>
-      <option value="incheon">인천광역시</option>
-      <option value="gangwon">강원도</option>
-      <option value="chungcheong">충청도</option>
-      <option value="daejeon">대전광역시</option>
-      <option value="sejong">세종특별자치시</option>
-      <option value="jeolla">전라도</option>
-      <option value="gwangju">광주광역시</option>
-      <option value="gyeongsang">경상도</option>
-      <option value="busan">부산광역시</option>
-      <option value="ulsan">울산광역시</option>
-      <option value="jeju">제주특별자치도</option>
-    </select>
-  </td>
-  <td>2022.08.02</td>
-</tr>
-<tr>
-  <td><input type="checkbox"></td>
-  <td>89</td>
-  <td>yeniya1004</td>
-  <td>김예원</td>
-  <td>yeniya1004@naver.com</td>
-  <td>01027422695</td>
-  <td>
-  <select name="gender" id="gender" class="gender">
-    <option value="male">남자</option>
-    <option value="female">여자</option>
-  </select>
-  </td>
-  <td>
-    <select name="resion" id="resion" class="resion">
-      <option value="seoul">서울특별시</option>
-      <option value="gyeonggi">경기도</option>
-      <option value="incheon">인천광역시</option>
-      <option value="gangwon">강원도</option>
-      <option value="chungcheong">충청도</option>
-      <option value="daejeon">대전광역시</option>
-      <option value="sejong">세종특별자치시</option>
-      <option value="jeolla">전라도</option>
-      <option value="gwangju">광주광역시</option>
-      <option value="gyeongsang">경상도</option>
-      <option value="busan">부산광역시</option>
-      <option value="ulsan">울산광역시</option>
-      <option value="jeju">제주특별자치도</option>
-    </select>
-  </td>
-  <td>2022.08.02</td>
-</tr>
-<tr>
-  <td><input type="checkbox"></td>
-  <td>89</td>
-  <td>yeniya1004</td>
-  <td>김예원</td>
-  <td>yeniya1004@naver.com</td>
-  <td>01027422695</td>
-  <td>
-  <select name="gender" id="gender" class="gender">
-    <option value="male">남자</option>
-    <option value="female">여자</option>
-  </select>
-  </td>
-  <td>
-    <select name="resion" id="resion" class="resion">
-      <option value="seoul">서울특별시</option>
-      <option value="gyeonggi">경기도</option>
-      <option value="incheon">인천광역시</option>
-      <option value="gangwon">강원도</option>
-      <option value="chungcheong">충청도</option>
-      <option value="daejeon">대전광역시</option>
-      <option value="sejong">세종특별자치시</option>
-      <option value="jeolla">전라도</option>
-      <option value="gwangju">광주광역시</option>
-      <option value="gyeongsang">경상도</option>
-      <option value="busan">부산광역시</option>
-      <option value="ulsan">울산광역시</option>
-      <option value="jeju">제주특별자치도</option>
-    </select>
-  </td>
-  <td>2022.08.02</td>
-</tr>
-<tr>
-  <td><input type="checkbox"></td>
-  <td>89</td>
-  <td>yeniya1004</td>
-  <td>김예원</td>
-  <td>yeniya1004@naver.com</td>
-  <td>01027422695</td>
-  <td>
-  <select name="gender" id="gender" class="gender">
-    <option value="male">남자</option>
-    <option value="female">여자</option>
-  </select>
-  </td>
-  <td>
-    <select name="resion" id="resion" class="resion">
-      <option value="seoul">서울특별시</option>
-      <option value="gyeonggi">경기도</option>
-      <option value="incheon">인천광역시</option>
-      <option value="gangwon">강원도</option>
-      <option value="chungcheong">충청도</option>
-      <option value="daejeon">대전광역시</option>
-      <option value="sejong">세종특별자치시</option>
-      <option value="jeolla">전라도</option>
-      <option value="gwangju">광주광역시</option>
-      <option value="gyeongsang">경상도</option>
-      <option value="busan">부산광역시</option>
-      <option value="ulsan">울산광역시</option>
-      <option value="jeju">제주특별자치도</option>
-    </select>
-  </td>
-  <td>2022.08.02</td>
-</tr>
-<tr>
-  <td><input type="checkbox"></td>
-  <td>89</td>
-  <td>yeniya1004</td>
-  <td>김예원</td>
-  <td>yeniya1004@naver.com</td>
-  <td>01027422695</td>
-  <td>
-  <select name="gender" id="gender" class="gender">
-    <option value="male">남자</option>
-    <option value="female">여자</option>
-  </select>
-  </td>
-  <td>
-    <select name="resion" id="resion" class="resion">
-      <option value="seoul">서울특별시</option>
-      <option value="gyeonggi">경기도</option>
-      <option value="incheon">인천광역시</option>
-      <option value="gangwon">강원도</option>
-      <option value="chungcheong">충청도</option>
-      <option value="daejeon">대전광역시</option>
-      <option value="sejong">세종특별자치시</option>
-      <option value="jeolla">전라도</option>
-      <option value="gwangju">광주광역시</option>
-      <option value="gyeongsang">경상도</option>
-      <option value="busan">부산광역시</option>
-      <option value="ulsan">울산광역시</option>
-      <option value="jeju">제주특별자치도</option>
-    </select>
-  </td>
-  <td>2022.08.02</td>
-</tr>
+              <td>
+                <select name="authority" id="authority" class="authority">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="manager">관리자</option>
+                </select>
+              </td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>회원 등록</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>89</td>
+              <td>yeniya1004</td>
+              <td>김예원</td>
+              <td>yeniya1004@naver.com</td>
+              <td>01027422695</td>
+              <td>여자</td>
+              <td>
+                <select name="resion" id="resion" class="resion">
+                  <option value="seoul">서울특별시</option>
+                  <option value="gyeonggi">경기도</option>
+                  <option value="incheon">인천광역시</option>
+                  <option value="gangwon">강원도</option>
+                  <option value="chungcheong">충청도</option>
+                  <option value="daejeon">대전광역시</option>
+                  <option value="sejong">세종특별자치시</option>
+                  <option value="jeolla">전라도</option>
+                  <option value="gwangju">광주광역시</option>
+                  <option value="gyeongsang">경상도</option>
+                  <option value="busan">부산광역시</option>
+                  <option value="ulsan">울산광역시</option>
+                  <option value="jeju">제주특별자치도</option>
+                </select>
+              </td>
+              <td>2022.08.02</td>
+              <td>
+                <select name="authority" id="authority" class="authority">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="manager">관리자</option>
+                </select>
+              </td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>회원 탈퇴</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>89</td>
+              <td>yeniya1004</td>
+              <td>김예원</td>
+              <td>yeniya1004@naver.com</td>
+              <td>01027422695</td>
+              <td>남자</td>
+              <td>
+                <select name="resion" id="resion" class="resion">
+                  <option value="seoul">서울특별시</option>
+                  <option value="gyeonggi">경기도</option>
+                  <option value="incheon">인천광역시</option>
+                  <option value="gangwon">강원도</option>
+                  <option value="chungcheong">충청도</option>
+                  <option value="daejeon">대전광역시</option>
+                  <option value="sejong">세종특별자치시</option>
+                  <option value="jeolla">전라도</option>
+                  <option value="gwangju">광주광역시</option>
+                  <option value="gyeongsang">경상도</option>
+                  <option value="busan">부산광역시</option>
+                  <option value="ulsan">울산광역시</option>
+                  <option value="jeju">제주특별자치도</option>
+                </select>
+              </td>
+              <td>2022.08.02</td>
+              <td>
+                <select name="authority" id="authority" class="authority">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="manager">관리자</option>
+                </select>
+              </td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>회원 등록</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>89</td>
+              <td>yeniya1004</td>
+              <td>김예원</td>
+              <td>yeniya1004@naver.com</td>
+              <td>01027422695</td>
+              <td>여자</td>
+              <td>
+                <select name="resion" id="resion" class="resion">
+                  <option value="seoul">서울특별시</option>
+                  <option value="gyeonggi">경기도</option>
+                  <option value="incheon">인천광역시</option>
+                  <option value="gangwon">강원도</option>
+                  <option value="chungcheong">충청도</option>
+                  <option value="daejeon">대전광역시</option>
+                  <option value="sejong">세종특별자치시</option>
+                  <option value="jeolla">전라도</option>
+                  <option value="gwangju">광주광역시</option>
+                  <option value="gyeongsang">경상도</option>
+                  <option value="busan">부산광역시</option>
+                  <option value="ulsan">울산광역시</option>
+                  <option value="jeju">제주특별자치도</option>
+                </select>
+              </td>
+              <td>2022.08.02</td>
+              <td>
+                <select name="authority" id="authority" class="authority">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="manager">관리자</option>
+                </select>
+              </td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>회원 등록</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>89</td>
+              <td>yeniya1004</td>
+              <td>김예원</td>
+              <td>yeniya1004@naver.com</td>
+              <td>01027422695</td>
+              <td>여자</td>
+              <td>
+                <select name="resion" id="resion" class="resion">
+                  <option value="seoul">서울특별시</option>
+                  <option value="gyeonggi">경기도</option>
+                  <option value="incheon">인천광역시</option>
+                  <option value="gangwon">강원도</option>
+                  <option value="chungcheong">충청도</option>
+                  <option value="daejeon">대전광역시</option>
+                  <option value="sejong">세종특별자치시</option>
+                  <option value="jeolla">전라도</option>
+                  <option value="gwangju">광주광역시</option>
+                  <option value="gyeongsang">경상도</option>
+                  <option value="busan">부산광역시</option>
+                  <option value="ulsan">울산광역시</option>
+                  <option value="jeju">제주특별자치도</option>
+                </select>
+              </td>
+              <td>2022.08.02</td>
+              <td>
+                <select name="authority" id="authority" class="authority">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="manager">관리자</option>
+                </select>
+              </td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>회원 등록</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>89</td>
+              <td>yeniya1004</td>
+              <td>김예원</td>
+              <td>yeniya1004@naver.com</td>
+              <td>01027422695</td>
+              <td>여자</td>
+              <td>
+                <select name="resion" id="resion" class="resion">
+                  <option value="seoul">서울특별시</option>
+                  <option value="gyeonggi">경기도</option>
+                  <option value="incheon">인천광역시</option>
+                  <option value="gangwon">강원도</option>
+                  <option value="chungcheong">충청도</option>
+                  <option value="daejeon">대전광역시</option>
+                  <option value="sejong">세종특별자치시</option>
+                  <option value="jeolla">전라도</option>
+                  <option value="gwangju">광주광역시</option>
+                  <option value="gyeongsang">경상도</option>
+                  <option value="busan">부산광역시</option>
+                  <option value="ulsan">울산광역시</option>
+                  <option value="jeju">제주특별자치도</option>
+                </select>
+              </td>
+              <td>2022.08.02</td>
+              <td>
+                <select name="authority" id="authority" class="authority">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="manager">관리자</option>
+                </select>
+              </td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>회원 등록</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>89</td>
+              <td>yeniya1004</td>
+              <td>김예원</td>
+              <td>yeniya1004@naver.com</td>
+              <td>01027422695</td>
+              <td>남자</td>
+              <td>
+                <select name="resion" id="resion" class="resion">
+                  <option value="seoul">서울특별시</option>
+                  <option value="gyeonggi">경기도</option>
+                  <option value="incheon">인천광역시</option>
+                  <option value="gangwon">강원도</option>
+                  <option value="chungcheong">충청도</option>
+                  <option value="daejeon">대전광역시</option>
+                  <option value="sejong">세종특별자치시</option>
+                  <option value="jeolla">전라도</option>
+                  <option value="gwangju">광주광역시</option>
+                  <option value="gyeongsang">경상도</option>
+                  <option value="busan">부산광역시</option>
+                  <option value="ulsan">울산광역시</option>
+                  <option value="jeju">제주특별자치도</option>
+                </select>
+              </td>
+              <td>2022.08.02</td>
+              <td>
+                <select name="authority" id="authority" class="authority">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="manager">관리자</option>
+                </select>
+              </td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>회원 등록</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>89</td>
+              <td>yeniya1004</td>
+              <td>김예원</td>
+              <td>yeniya1004@naver.com</td>
+              <td>01027422695</td>
+              <td>여자</td>
+              <td>
+                <select name="resion" id="resion" class="resion">
+                  <option value="seoul">서울특별시</option>
+                  <option value="gyeonggi">경기도</option>
+                  <option value="incheon">인천광역시</option>
+                  <option value="gangwon">강원도</option>
+                  <option value="chungcheong">충청도</option>
+                  <option value="daejeon">대전광역시</option>
+                  <option value="sejong">세종특별자치시</option>
+                  <option value="jeolla">전라도</option>
+                  <option value="gwangju">광주광역시</option>
+                  <option value="gyeongsang">경상도</option>
+                  <option value="busan">부산광역시</option>
+                  <option value="ulsan">울산광역시</option>
+                  <option value="jeju">제주특별자치도</option>
+                </select>
+              </td>
+              <td>2022.08.02</td>
+              <td>
+                <select name="authority" id="authority" class="authority">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="manager">관리자</option>
+                </select>
+              </td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>회원 등록</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>89</td>
+              <td>yeniya1004</td>
+              <td>김예원</td>
+              <td>yeniya1004@naver.com</td>
+              <td>01027422695</td>
+              <td>남자</td>
+              <td>
+                <select name="resion" id="resion" class="resion">
+                  <option value="seoul">서울특별시</option>
+                  <option value="gyeonggi">경기도</option>
+                  <option value="incheon">인천광역시</option>
+                  <option value="gangwon">강원도</option>
+                  <option value="chungcheong">충청도</option>
+                  <option value="daejeon">대전광역시</option>
+                  <option value="sejong">세종특별자치시</option>
+                  <option value="jeolla">전라도</option>
+                  <option value="gwangju">광주광역시</option>
+                  <option value="gyeongsang">경상도</option>
+                  <option value="busan">부산광역시</option>
+                  <option value="ulsan">울산광역시</option>
+                  <option value="jeju">제주특별자치도</option>
+                </select>
+              </td>
+              <td>2022.08.02</td>
+              <td>
+                <select name="authority" id="authority" class="authority">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="manager">관리자</option>
+                </select>
+              </td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>회원 등록</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>89</td>
+              <td>yeniya1004</td>
+              <td>김예원</td>
+              <td>yeniya1004@naver.com</td>
+              <td>01027422695</td>
+              <td>남자</td>
+              <td>
+                <select name="resion" id="resion" class="resion">
+                  <option value="seoul">서울특별시</option>
+                  <option value="gyeonggi">경기도</option>
+                  <option value="incheon">인천광역시</option>
+                  <option value="gangwon">강원도</option>
+                  <option value="chungcheong">충청도</option>
+                  <option value="daejeon">대전광역시</option>
+                  <option value="sejong">세종특별자치시</option>
+                  <option value="jeolla">전라도</option>
+                  <option value="gwangju">광주광역시</option>
+                  <option value="gyeongsang">경상도</option>
+                  <option value="busan">부산광역시</option>
+                  <option value="ulsan">울산광역시</option>
+                  <option value="jeju">제주특별자치도</option>
+                </select>
+              </td>
+              <td>2022.08.02</td>
+              <td>
+                <select name="authority" id="authority" class="authority">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="manager">관리자</option>
+                </select>
+              </td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>회원 등록</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>89</td>
+              <td>yeniya1004</td>
+              <td>김예원</td>
+              <td>yeniya1004@naver.com</td>
+              <td>01027422695</td>
+              <td>남자</td>
+              <td>
+                <select name="resion" id="resion" class="resion">
+                  <option value="seoul">서울특별시</option>
+                  <option value="gyeonggi">경기도</option>
+                  <option value="incheon">인천광역시</option>
+                  <option value="gangwon">강원도</option>
+                  <option value="chungcheong">충청도</option>
+                  <option value="daejeon">대전광역시</option>
+                  <option value="sejong">세종특별자치시</option>
+                  <option value="jeolla">전라도</option>
+                  <option value="gwangju">광주광역시</option>
+                  <option value="gyeongsang">경상도</option>
+                  <option value="busan">부산광역시</option>
+                  <option value="ulsan">울산광역시</option>
+                  <option value="jeju">제주특별자치도</option>
+                </select>
+              </td>
+              <td>2022.08.02</td>
+              <td>
+                <select name="authority" id="authority" class="authority">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="manager">관리자</option>
+                </select>
+              </td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>회원 탈퇴</td>
+            </tr>
+            <tr>
+              <td><input type="checkbox" /></td>
+              <td>89</td>
+              <td>yeniya1004</td>
+              <td>김예원</td>
+              <td>yeniya1004@naver.com</td>
+              <td>01027422695</td>
+              <td>여자</td>
+              <td>
+                <select name="resion" id="resion" class="resion">
+                  <option value="seoul">서울특별시</option>
+                  <option value="gyeonggi">경기도</option>
+                  <option value="incheon">인천광역시</option>
+                  <option value="gangwon">강원도</option>
+                  <option value="chungcheong">충청도</option>
+                  <option value="daejeon">대전광역시</option>
+                  <option value="sejong">세종특별자치시</option>
+                  <option value="jeolla">전라도</option>
+                  <option value="gwangju">광주광역시</option>
+                  <option value="gyeongsang">경상도</option>
+                  <option value="busan">부산광역시</option>
+                  <option value="ulsan">울산광역시</option>
+                  <option value="jeju">제주특별자치도</option>
+                </select>
+              </td>
+              <td>2022.08.02</td>
+              <td>
+                <select name="authority" id="authority" class="authority">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="manager">관리자</option>
+                </select>
+              </td>
+              <td>
+                <input type="checkbox" />
+              </td>
+              <td>회원 등록</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-
-      </tbody>
-      </table>
-  </div>
-  <div class="page">
-          <div class="page-wrap">
-              <button class="page_num">&lt;</button>
-              <button class="page_num">1</button>
-              <button class="page_num">2</button>
-              <button class="page_num">3</button>
-              <button class="page_num">4</button>
-              <button class="page_num">5</button>
-              <button class="page_num">&gt;</button>
-          </div>
-      <button class="write-button"><i class="fa-solid fa-pen"></i></i>write</button>
-  </div>
-  <div class="reservation-search">
-      <form method="post" action="result.do"
-      name="frm" id="frm" class="frm">
-      <select class="search-select" >
-          <option value="">-- 검색 조건 --</option>
-          <option value="subject">제목</option>
-          <option value="content">내용</option>
-          <option value="writer">글쓴이</option>
-        </select>
-      <input class="search-text" type="text" placeholder="Search">
-      <button type="submit" class="search-button">
-          <i class="fa-solid fa-magnifying-glass"></i>search</button>
-          </form>
-</div>
-</div>
-</body>
+      <div class="page">
+        <div class="page-wrap">
+          <a href="#" class="right-border"
+            ><i class="fa-solid fa-angle-left"></i
+          ></a>
+          <a href="#" class="right-border">1</a>
+          <a href="#" class="right-border">2</a>
+          <a href="#" class="right-border">3</a>
+          <a href="#" class="right-border">4</a>
+          <a href="#" class="right-border">5</a>
+          <a href="#"><i class="fa-solid fa-angle-right"></i></a>
+        </div>
+      </div>
+      <div class="search-wrap">
+        <form method="post" action="result.do" name="frm" id="frm" class="frm">
+          <select class="search-select">
+            <option value="">-- 검색 조건 --</option>
+            <option value="num">번호</option>
+            <option value="id">아이디</option>
+            <option value="name">이름</option>
+            <option value="">등록일자</option>
+          </select>
+          <input class="search-text" type="text" placeholder="Search" />
+          <button type="submit" class="search-button">
+            <i class="fa-solid fa-magnifying-glass"></i>search
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
 </html>

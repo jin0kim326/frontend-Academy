@@ -15,7 +15,13 @@ a {
 input {
   outline: 0;
 }
-button {
+select {
+  text-align: center;
+  outline: 0;
+  padding: 1px;
+}
+button,
+select {
   cursor: pointer;
 }
 /* reset end */

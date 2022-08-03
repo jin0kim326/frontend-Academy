@@ -26,7 +26,6 @@ form {
 
 .userid,
 .passwd {
-  margin-bottom: 20px;
   width: 100%;
   padding: 10px;
   border-radius: 3px;
@@ -43,6 +42,12 @@ form {
   background-position: 10px 10px;
   background-image: url(../img/user-solid.jpg);
 }
+.error-id,
+.error-passwd {
+  height: 20px;
+  font-size: 14px;
+  color: red;
+}
 .passwd {
   padding-left: 40px;
   background-size: 15px;
@@ -50,10 +55,16 @@ form {
   background-position: 10px 10px;
   background-image: url(../img/lock-solid.jpg);
 }
+
+.login-error-message {
+  height: 40px;
+  font-size: 12px;
+  color: red;
+}
 .button-wrap {
   display: flex;
   justify-content: space-between;
-  padding: 30px;
+  padding: 0 30px 10px 30px;
 }
 .signup-page-link {
   font-size: 14px;

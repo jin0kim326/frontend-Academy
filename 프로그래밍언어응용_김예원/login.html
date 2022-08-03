@@ -43,6 +43,7 @@
             placeholder="UserID"
             autofocus
           />
+          <div class="error-id"></div>
           <input
             type="password"
             name="passwd"
@@ -50,13 +51,17 @@
             class="passwd"
             placeholder="Password"
           />
+          <div class="error-passwd"></div>
         </div>
+        <div class="login-error-message"></div>
         <div class="button-wrap">
           <a class="signup-page-link" href="register.html"
             >Don't you have an account?</a
           >
           <!-- HTML에서 이벤트변수를 받으려면 'event'로 써주기!! -->
-          <button type="submit" id="login-btn" onclick="checkLogin(event)">Login</button>
+          <button type="submit" id="login-btn" onclick="checkLogin(event)">
+            Login
+          </button>
         </div>
       </form>
     </div>

@@ -34,203 +34,232 @@
         class="frm"
         enctype="multipart/form-data"
       >
-        <div class="input-wrapp">
-          <div class="input-wrap">
-            <input
-              type="text"
-              name="userid"
-              id="userid"
-              class="userid input"
-              placeholder="아이디"
-              autofocus
-            />
-            <i class="fa-solid fa-circle-check"></i>
-            <div class="errorMsg-id error"></div>
-          </div>
+        <div class="input-wrap">
+          <input
+            type="text"
+            name="userid"
+            id="userid"
+            class="userid input"
+            placeholder="아이디"
+            autofocus
+          />
+          <span class="icon"><i class="fa-solid fa-circle-check"></i></span>
+          <div class="errorMsg-id error"></div>
+        </div>
 
-          <div class="input-wrap">
-            <input
-              type="password"
-              name="passwd"
-              id="passwd"
-              class="passwd input"
-              placeholder="비밀번호"
-            />
-            <i class="fa-solid fa-circle-check"></i>
-            <div class="errorMsg-passwd error"></div>
-          </div>
+        <div class="input-wrap">
+          <input
+            type="password"
+            name="passwd"
+            id="passwd"
+            class="passwd input"
+            placeholder="비밀번호"
+          />
+          <span class="icon"><i class="fa-solid fa-circle-check"></i></span>
+          <div class="errorMsg-passwd error"></div>
+        </div>
 
-          <div class="input-wrap">
-            <input
-              type="password"
-              name="confirm-passwd"
-              id="confirm-passwd"
-              class="confirm-passwd input"
-              placeholder="확인 비밀번호"
-            />
-            <i class="fa-solid fa-circle-check"></i>
-            <div class="errorMsg-check-passwd error"></div>
-          </div>
+        <div class="input-wrap">
+          <input
+            type="password"
+            name="confirm-passwd"
+            id="confirm-passwd"
+            class="confirm-passwd input"
+            placeholder="확인 비밀번호"
+          />
+          <span class="icon"><i class="fa-solid fa-circle-check"></i></span>
+          <div class="errorMsg-check-passwd error"></div>
+        </div>
 
-          <div class="input-wrap">
-            <input
-              type="text"
-              name="email"
-              id="email"
-              class="email input"
-              placeholder="이메일"
-            />
-            <i class="fa-solid fa-circle-check"></i>
-            <div class="errorMsg-email error"></div>
-          </div>
+        <div class="input-wrap">
+          <input
+            type="text"
+            name="email"
+            id="email"
+            class="email input"
+            placeholder="이메일"
+          />
+          <span class="icon"><i class="fa-solid fa-circle-check"></i></span>
+          <div class="errorMsg-email error"></div>
+        </div>
 
-          <div class="input-wrap">
-            <input
-              type="tel"
-              name="tel"
-              id="tel"
-              class="tel input"
-              placeholder="전화번호"
-            />
-            <i class="fa-solid fa-circle-check"></i>
-            <div class="errorMsg-tel error"></div>
-          </div>
+        <div class="input-wrap">
+          <input
+            type="tel"
+            name="tel"
+            id="tel"
+            class="tel input"
+            placeholder="전화번호"
+          />
+          <span class="icon"><i class="fa-solid fa-circle-check"></i></span>
+          <div class="errorMsg-tel error"></div>
+        </div>
 
-          <div class="gender-wrap">
-            <div class="title-wrap">
-              <i class="fa-regular fa-pen-to-square"></i>
-              <h4>성별</h4>
-            </div>
-            <span class="genderRadio"
-              ><input type="radio" name="gender" value="m" />남자</span
+        <div class="gender-wrap">
+          <div class="title-wrap">
+            <i class="fa-regular fa-pen-to-square"></i>
+            <h4>성별</h4>
+            <span class="check-icon gender"
+              ><i class="fa-solid fa-circle-check"></i
+            ></span>
+          </div>
+          <span class="genderRadio"
+            ><input type="radio" name="gender" value="m" />남자</span
+          >
+          <span class="genderRadio"
+            ><input type="radio" name="gender" value="f" />여자</span
+          >
+          <!-- <div>성별을 선택해 주세요.</div> -->
+        </div>
+
+        <div class="region-wrap">
+          <div class="title-wrap">
+            <i class="fa-regular fa-pen-to-square"></i>
+            <h4>거주 지역을 선택하세요.</h4>
+            <span class="check-icon area"
+              ><i class="fa-solid fa-circle-check"></i
+            ></span>
+            <span class="region-message">지역을 선택하세요</span>
+          </div>
+          <select name="region-select" id="region-select" class="region-select">
+            <option value="">지역을 선택하세요</option>
+            <option value="seoul">서울특별시</option>
+            <option value="gyeonggi">경기도</option>
+            <option value="incheon">인천광역시</option>
+            <option value="gangwon">강원도</option>
+            <option value="chungcheong">충청도</option>
+            <option value="daejeon">대전광역시</option>
+            <option value="sejong">세종특별자치시</option>
+            <option value="jeolla">전라도</option>
+            <option value="gwangju">광주광역시</option>
+            <option value="gyeongsang">경상도</option>
+            <option value="busan">부산광역시</option>
+            <option value="ulsan">울산광역시</option>
+            <option value="jeju">제주특별자치도</option>
+          </select>
+        </div>
+
+        <div class="hobby-wrap">
+          <div class="title-wrap">
+            <i class="fa-regular fa-pen-to-square"></i>
+            <h4>취미를 선택하세요</h4>
+            <span class="check-icon hobby">
+              <!--
+                <i class="fa-solid fa-circle-check"></i >
+              --></span
             >
-            <span class="genderRadio"
-              ><input type="radio" name="gender" value="f" />여자</span
-            >
-            <!-- <div>성별을 선택해 주세요.</div> -->
           </div>
-
-          <div class="region-wrap">
-            <div class="title-wrap">
-              <i class="fa-regular fa-pen-to-square"></i>
-              <h4>거주 지역을 선택하세요 :</h4>
-              <span class="region-message">지역을 선택하세요</span>
-            </div>
-            <select
-              name="region-select"
-              id="region-select"
-              class="region-select"
-            >
-              <option value="">지역을 선택하세요</option>
-              <option value="seoul">서울특별시</option>
-              <option value="gyeonggi">경기도</option>
-              <option value="incheon">인천광역시</option>
-              <option value="gangwon">강원도</option>
-              <option value="chungcheong">충청도</option>
-              <option value="daejeon">대전광역시</option>
-              <option value="sejong">세종특별자치시</option>
-              <option value="jeolla">전라도</option>
-              <option value="gwangju">광주광역시</option>
-              <option value="gyeongsang">경상도</option>
-              <option value="busan">부산광역시</option>
-              <option value="ulsan">울산광역시</option>
-              <option value="jeju">제주특별자치도</option>
-            </select>
-          </div>
-
-          <div class="hobby-wrap">
-            <div class="title-wrap">
-              <i class="fa-regular fa-pen-to-square"></i>
-              <h4>취미를 선택하세요</h4>
-            </div>
-            <div class="hobby-check-wrap">
+          <div class="hobby-check-wrap">
+            <div>
               <input
                 type="checkbox"
                 id="hobby-check"
                 class="hobby-check"
               /><span>등산</span>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="hobby-check"
+                class="hobby-check"
+              /><span>등산</span>
+            </div>
+            <div>
               <input
                 type="checkbox"
                 id="hobby-check"
                 class="hobby-check"
               /><span>음악감상</span>
+            </div>
+            <div>
               <input
                 type="checkbox"
                 id="hobby-check"
                 class="hobby-check"
               /><span>영화감상</span>
+            </div>
+            <div>
               <input
                 type="checkbox"
                 id="hobby-check"
                 class="hobby-check"
               /><span>운동,헬스</span>
+            </div>
+            <div>
               <input
                 type="checkbox"
                 id="hobby-check"
                 class="hobby-check"
               /><span>게임</span>
+            </div>
+            <div>
               <input
                 type="checkbox"
                 id="hobby-check"
                 class="hobby-check"
               /><span>독서</span>
+            </div>
+            <div>
               <input
                 type="checkbox"
                 id="hobby-check"
                 class="hobby-check"
               /><span>TV시청</span>
+            </div>
+            <div>
               <input
                 type="checkbox"
                 id="hobby-check"
                 class="hobby-check"
               /><span>낚시</span>
+            </div>
+            <div>
               <input
                 type="checkbox"
                 id="hobby-check"
                 class="hobby-check"
               /><span>축구</span>
+            </div>
+            <div>
               <input
                 type="checkbox"
                 id="hobby-check"
                 class="hobby-check"
               /><span>농구</span>
+            </div>
+            <div>
               <input
                 type="checkbox"
                 id="hobby-check"
                 class="hobby-check"
               /><span>기타 스포츠</span>
-              <input
-                type="checkbox"
-                id="hobby-check"
-                class="hobby-check"
-              /><span>여행</span>
             </div>
           </div>
+        </div>
 
-          <div class="introduction-wrap">
-            <div class="title-wrap">
-              <i class="fa-regular fa-pen-to-square"></i>
-              <h4>자기소개서를 작성해주세요.</h4>
-            </div>
-            <div class="textarea-wrap">
-              <textarea
-                name="introduction"
-                id="introduction"
-                cols="80"
-                rows="10"
-              ></textarea>
-            </div>
-            <p class="input-cnt">0 글자 입니다.</p>
+        <div class="introduction-wrap">
+          <div class="title-wrap">
+            <i class="fa-regular fa-pen-to-square"></i>
+            <h4>자기소개서를 작성해주세요.</h4>
           </div>
+          <div class="textarea-wrap">
+            <textarea
+              name="introduction"
+              id="introduction"
+              cols="80"
+              rows="10"
+            ></textarea>
+          </div>
+          <p class="input-cnt">0 글자 입니다.</p>
+        </div>
 
-          <div class="button-wrap">
-            <a class="login-page-link" href="login.html"
-              >If you have an account, then login now!</a
-            >
-            <button type="submit" id="signup-btn" class="signup-btn">
-              Sign up
-            </button>
-          </div>
+        <div class="button-wrap">
+          <a class="login-page-link" href="login.html"
+            >If you have an account, then login now!</a
+          >
+          <button type="submit" id="signup-btn" class="signup-btn">
+            Sign up
+          </button>
         </div>
       </form>
     </div>
