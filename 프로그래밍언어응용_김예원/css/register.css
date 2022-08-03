@@ -19,10 +19,12 @@ body {
   padding: 60px 30px;
   border-radius: 8px;
 }
+
 .Signup-title h1 {
   text-align: center;
   margin-bottom: 20px;
 }
+
 .Signup-title hr {
   margin-bottom: 30px;
 }
@@ -42,53 +44,61 @@ body {
   background-repeat: no-repeat;
   background-position: 10px 10px;
 }
+
 .input-wrap .input:focus {
   border: 1px solid black;
 }
+
 .title-wrap {
   font-size: 14px;
   font-weight: 700;
   margin: 0 0 20px 30px;
 }
+
 .title-wrap h4 {
   display: inline-block;
 }
+
 .title-wrap i {
   margin-right: 10px;
 }
+
 .userid {
   /* width 가 안먹음 */
   background-image: url(../img/user-solid.svg);
 }
+
 .passwd {
   background-image: url(../img/lock-solid.svg);
 }
+
 .confirm-passwd {
   background-image: url(../img/check-solid.jpg);
 }
+
 .email {
   background-image: url(../img/envelope-solid.jpg);
 }
+
 .tel {
   background-image: url(../img/mobile-screen-button-solid.jpg);
 }
+
 .input-wrap .error {
   font-size: 14px;
   padding: 5px;
   color: red;
   height: 30px;
 }
-/* .input-wrap i{
-  position: absolute;
-  top: 12px;
-  right: 70px;
-  display: none;
-} */
 
 .icon {
   position: absolute;
   top: 12px;
   right: 70px;
+  visibility: hidden;
+}
+
+.check-icon {
   visibility: hidden;
 }
 
@@ -111,11 +121,13 @@ body {
   display: flex;
   margin: 20px 0;
 }
+
 .gender-wrap input[type="radio"] {
   width: 15px;
   height: 15px;
   /* align */
 }
+
 .genderRadio {
   margin: 0 10px;
 }
@@ -125,15 +137,18 @@ body {
 .region-wrap p {
   display: inline-block;
 }
+
 .region-select {
   margin: 0 0 20px 60px;
   padding: 6px;
   outline: 0;
 }
+
 .hobby-wrap {
   width: 100%;
   margin-bottom: 30px;
 }
+
 .hobby-check-wrap {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -146,15 +161,19 @@ body {
 .hobby-check {
   width: 20px;
 }
+
 .textarea-wrap {
   text-align: center;
 }
+
 textarea {
   outline: 0;
 }
+
 textarea:focus {
   border: 1px solid red;
 }
+
 .introduction-wrap p {
   margin-right: 50px;
   float: right;
@@ -168,11 +187,13 @@ textarea:focus {
   justify-content: space-between;
   padding: 30px;
 }
+
 .login-page-link {
   font-size: 14px;
   line-height: 40px;
   align-content: center;
 }
+
 .button-wrap button {
   padding: 8px 25px;
   font-size: 15px;
@@ -183,6 +204,7 @@ textarea:focus {
   font-weight: bold;
   letter-spacing: 1.5px;
 }
+
 .button-wrap button:hover {
   background-color: rgb(50, 120, 80);
   border: 1px solid rgb(50, 120, 80);

@@ -179,7 +179,6 @@ checkArea = () => {
 checkHobby = () => {
   const checkBoxes = document.querySelectorAll(".hobby-check");
   const checkIcon = document.querySelector(".check-icon.hobby");
-
   let count = 0;
   const AT_LEAST_COUNT = 1; //선택해야하는 숫자(설정값)
 
@@ -209,15 +208,14 @@ checkForm = (event) => {
   // checkHobby();
 
   if (
-    // checkID() &&
-    // checkPasswd() &&
-    // checkConfirmPasswd() &&
-    // checkEmail() &&
-    // checkTel() &&
-    // checkGender() &&
-    // checkArea() &&
-    // checkHobby()
-    checkArea()
+    checkID() &&
+    checkPasswd() &&
+    checkConfirmPasswd() &&
+    checkEmail() &&
+    checkTel() &&
+    checkGender() &&
+    checkArea() &&
+    checkHobby()
   ) {
     location.href = "login.html";
   }
